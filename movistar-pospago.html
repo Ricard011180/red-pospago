@@ -1,0 +1,1106 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Popago Movistar</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet" />
+  <style>
+    @font-face {
+      font-family: 'CenturyGothic';
+      src: local('Century Gothic'), local('CenturyGothic'), local('Gothic');
+      font-weight: 400;
+      font-style: normal;
+    }
+
+    @font-face {
+      font-family: 'CenturyGothic';
+      src: local('Century Gothic Bold'), local('CenturyGothic-Bold');
+      font-weight: 700 900;
+      font-style: normal;
+    }
+
+    :root {
+      --font-main: 'CenturyGothic', 'Century Gothic', 'Futura', 'Trebuchet MS', 'Nunito', sans-serif;
+      --mv-blue: #009EE3;
+      --mv-dark: #0a5d94;
+      --mv-light: #E5F6FD;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: var(--font-main);
+      letter-spacing: 0.01em;
+    }
+
+    .hide-scroll::-webkit-scrollbar {
+      display: none;
+    }
+
+    .hide-scroll {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-family: var(--font-main);
+      font-weight: 700;
+    }
+
+    /* Botones y labels */
+    button,
+    a,
+    label,
+    p,
+    span,
+    li,
+    input,
+    textarea {
+      font-family: var(--font-main);
+    }
+
+
+    .sky-bg {
+      background: linear-gradient(180deg, #5AA7E0, #2E7FC9);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .sky-bg::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image:
+        radial-gradient(60px 26px at 10% 15%, rgba(255, 255, 255, .55), transparent 70%),
+        radial-gradient(80px 30px at 30% 8%, rgba(255, 255, 255, .45), transparent 70%),
+        radial-gradient(70px 28px at 85% 20%, rgba(255, 255, 255, .5), transparent 70%),
+        radial-gradient(90px 34px at 60% 85%, rgba(255, 255, 255, .4), transparent 70%),
+        radial-gradient(70px 26px at 15% 90%, rgba(255, 255, 255, .4), transparent 70%);
+      pointer-events: none;
+    }
+
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+
+    /* ============================
+       ANIMACIONES AL HACER SCROLL
+       ============================ */
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: opacity 0.8s cubic-bezier(0.22, 1, 0.36, 1),
+        transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+      will-change: opacity, transform;
+    }
+
+    .reveal.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .reveal-left {
+      transform: translateX(-60px);
+    }
+
+    .reveal-left.is-visible {
+      transform: translateX(0);
+    }
+
+    .reveal-right {
+      transform: translateX(60px);
+    }
+
+    .reveal-right.is-visible {
+      transform: translateX(0);
+    }
+
+    .reveal-zoom {
+      transform: scale(0.85);
+    }
+
+    .reveal-zoom.is-visible {
+      transform: scale(1);
+    }
+
+    .reveal-stagger>* {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+        transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    .reveal-stagger.is-visible>* {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .reveal-stagger.is-visible>*:nth-child(1) {
+      transition-delay: 0.05s;
+    }
+
+    .reveal-stagger.is-visible>*:nth-child(2) {
+      transition-delay: 0.15s;
+    }
+
+    .reveal-stagger.is-visible>*:nth-child(3) {
+      transition-delay: 0.25s;
+    }
+
+    .reveal-stagger.is-visible>*:nth-child(4) {
+      transition-delay: 0.35s;
+    }
+
+    .reveal-stagger.is-visible>*:nth-child(5) {
+      transition-delay: 0.45s;
+    }
+
+    .reveal-stagger.is-visible>*:nth-child(6) {
+      transition-delay: 0.55s;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+
+      .reveal,
+      .reveal-stagger>* {
+        opacity: 1 !important;
+        transform: none !important;
+        transition: none !important;
+      }
+    }
+  </style>
+</head>
+
+<body class="bg-white text-gray-800">
+
+  <!-- --Banner-- -->
+  <section class="relative min-h-screen overflow-hidden bg-cover bg-center bg-fixed min-h-screen"
+    style="background-image:url('image/fondo-nubes.jpg')">
+    <div class="absolute top-4 left-0 sm:top-6 sm:left-1 md:top-8 md:left-1 z-20">
+      <img src="image/logo.png" alt="Logo" class="w-40 sm:w-52 md:w-64 lg:w-72 xl:w-80 h-auto">
+    </div>
+    <div class="relative z-10 flex items-center justify-center min-h-screen">
+      <img src="image/banner.png" alt="Banner" class="reveal reveal-zoom w-full max-w-2xl h-auto object-contain">
+    </div>
+    <!-- Olas -->
+    <div class="absolute bottom-0 left-0 w-full overflow-hidden leading-none">
+      <svg class="block w-full h-28" viewBox="0 0 1440 170" preserveAspectRatio="none">
+        <path fill="#ffffff"
+          d="M0,96L40,106.7C80,117,160,139,240,133.3C320,128,400,96,480,90.7C560,85,640,107,720,122.7C800,139,880,149,960,133.3C1040,117,1120,75,1200,69.3C1280,64,1360,96,1400,112L1440,128L1440,170L0,170Z">
+        </path>
+      </svg>
+    </div>
+  </section>
+
+  <!--- Servicios --->
+  <section class="px-4 sm:px-6 lg:px-8 py-8">
+    <div class="mx-auto max-w-7xl">
+      <div class="flex items-center justify-between reveal">
+        <div class="flex-1 flex justify-start">
+          <img src="image/bocina-der.png" alt="Izquierda" class="hidden sm:block w-16 md:w-28 lg:w-56 xl:w-80 h-auto">
+        </div>
+        <div
+          class="overflow-hidden px-2 sm:px-4 py-6 sm:py-8 flex flex-col items-center justify-center min-h-[160px] sm:min-h-[220px]">
+          <h3 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl
+          font-black text-[#2AACE2] text-center
+          leading-tight">
+            CONECTANDO<br>CONTIGO
+          </h3>
+          <div class="w-40 sm:w-56 md:w-72 h-1 bg-[#2AACE2] mt-4 sm:mt-6 rounded-full"></div>
+        </div>
+        <div class="flex-1 flex justify-end">
+          <img src="image/bocina-izq.png" alt="Derecha" class="hidden sm:block w-16 md:w-28 lg:w-56 xl:w-80 h-auto">
+        </div>
+      </div>
+      <div
+        class="reveal reveal-stagger grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 w-full sm:w-[90%] mx-auto gap-6 sm:gap-8 mt-8">
+        <img src="image/planes_renta.png" alt="Planes de renta" class="w-full h-auto object-contain rounded-lg">
+        <img src="image/esim.png" alt="Portabilidad" class="w-full h-auto object-contain rounded-lg">
+        <img src="image/cambiate.png" alt="eSIM" class="w-full h-auto object-contain rounded-lg">
+      </div>
+    </div>
+  </section>
+
+
+  <!-- --Planes de renta-- -->
+  <section class="relative overflow-hidden bg-cover bg-center py-1 bg-fixed"
+    style="background-image:url('image/fondo-nubes.jpg')">
+    <!-- Olas -->
+    <div class="absolute top-0 left-0 w-full overflow-hidden leading-none rotate-180 z-0">
+      <svg class="block w-full h-28" viewBox="0 0 1440 170" preserveAspectRatio="none">
+        <path fill="#ffffff"
+          d="M0,96L40,106.7C80,117,160,139,240,133.3C320,128,400,96,480,90.7C560,85,640,107,720,122.7C800,139,880,149,960,133.3C1040,117,1120,75,1200,69.3C1280,64,1360,96,1400,112L1440,128L1440,170L0,170Z">
+        </path>
+      </svg>
+    </div>
+    <div class="absolute bottom-0 left-0 w-full overflow-hidden leading-none z-0">
+      <svg class="block w-full h-28" viewBox="0 0 1440 170" preserveAspectRatio="none">
+        <path fill="#1298E0"
+          d="M0,96L40,106.7C80,117,160,139,240,133.3C320,128,400,96,480,90.7C560,85,640,107,720,122.7C800,139,880,149,960,133.3C1040,117,1120,75,1200,69.3C1280,64,1360,96,1400,112L1440,128L1440,170L0,170Z">
+        </path>
+      </svg>
+    </div>
+
+    <!-- Contenido -->
+    <div class="relative z-10 max-w-7xl mx-auto px-6 pt-32 pb-32">
+      <div class="reveal overflow-hidden px-4 py-8 flex flex-col items-center justify-center">
+        <h3 class="text-5xl sm:text-5xl md:text-5xl lg:text-6xl xl:text-5xl
+            font-black text-[#ffffff] text-center
+            leading-tight">
+          Elige el plan que mejor se adapta a ti
+        </h3>
+        <div class="w-72 h-1 bg-[#ffffff] mt-6 rounded-full"></div>
+      </div>
+      <div class="overflow-hidden">
+        <div class="flex">
+          <button
+            class="tab-btn flex-1 py-5 text-lg font-semibold border-b-4 border-write hover:text-black text-white transition"
+            data-tab="linea">
+            Línea Nueva
+          </button>
+          <button
+            class="tab-btn flex-1 py-5 text-lg font-semibold border-b-4 border-transparent text-white hover:text-black transition"
+            data-tab="porta">
+            Portabilidad
+          </button>
+        </div>
+      </div>
+      <div>
+        <!-- ===== Línea Nueva ===== -->
+        <div id="linea" class="tab-content">
+          <div class="max-w-6xl mx-auto py-3 px-2 space-y-10">
+            <div class="reveal reveal-zoom relative bg-white border-white p-4 shadow-2xl">
+              <div
+                class="inline-block bg-[#7fc538] min-w-[100%] text-white text-center px-8 py-4 font-black text-2xlshadow">
+                <span class="text-5xl font-bold align-middle ml-1"> Pro Ilimitado 60</span>
+              </div>
+              <div class="bg-white p-10 flex flex-wrap gap-6 justify-center items-stretch">
+                <div
+                  class="flex-1 min-w-[100%] bg-[#7fc538] text-white rounded-xl p-2 flex flex-col items-center justify-center">
+                  <span class="italic font-semibold text-[20px]">ilimitados</span>
+                  <span class="font-black text-[40px] mt-1">PUJ 60 GB</span>
+                  <span class="text-[20px] font-semibold mt-1">para navegar</span>
+                </div>
+                <div class="flex-1 min-w-[100px] flex flex-col gap-2">
+                  <div
+                    class="bg-slate-800 text-white rounded-lg py-2 px-2 text-center font-bold text-sm italic flex items-center justify-center gap-1.5">
+                    <svg viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5 flex-shrink-0">
+                      <path
+                        d="M21 16v-2l-8-5V3.5a1.5 1.5 0 0 0-3 0V9l-8 5v2l8-2.5V19l-2.5 1.5V22l4-1 4 1v-1.5L13 19v-5.5l8 2.5z" />
+                    </svg>
+                    <h2 class="text-2xl">Pasaporte Movistar</h2>
+                  </div>
+                  <div
+                    class="bg-sky-50 border border-sky-200 rounded-lg py-2 px-2 text-center leading-tight text-slate-700">
+                    <svg viewBox="0 0 24 24" fill="currentColor" class="w-10 h-10 inline-block align-text-bottom mr-1">
+                      <path d="M4 4h16v12H7l-3 3V4z" />
+                    </svg>
+                    <h2 class="text-xl">
+                      México, EUA, Canadá, Pto. Rico<br>
+                      <strong>Ilimitados</strong>
+                    </h2>
+                  </div>
+                </div>
+                <div
+                  class="flex-1 min-w-[100px] bg-[#7fc538] text-white rounded-xl p-4 flex flex-col items-center justify-center">
+                  <span class="font-black text-[45px]">$599<span class="text-xs font-bold">/mes</span></span>
+                </div>
+              </div>
+              <button
+                class="mt-5 w-2/3 mx-auto block bg-white border-2 border-slate-800 rounded-full py-2.5 font-extrabold text-slate-800 hover:bg-slate-800 hover:text-white transition">
+                Elegir plan
+              </button>
+            </div>
+
+            <div class="reveal reveal-stagger relative flex gap-2 overflow-x-auto no-scrollbar pb-2 justify-center">
+              <!-- Pro 11 -->
+              <div class="flex-none min-w-[100px] bg-white p-2 shadow-lg flex flex-col items-center text-center">
+                <span class="bg-sky-400 text-white font-extrabold text-2xl  px-16 py-4 mb-2">
+                  Pro 11
+                </span>
+                <div class="bg-slate-800 text-white py-14 w-full mb-1.5 text-center">
+                  <div class="font-black text-[28px]">22 GB</div>
+                  <div class="text-[18px] font-semibold">para navegar</div>
+                </div>
+                <div class="text-slate-600 font-bold">
+                  <div class="flex items-center justify-center gap-1.5 my-1.5">
+                    <svg viewBox="0 0 24 24" fill="currentColor" class="w-10 h-10">
+                      <path
+                        d="M12 2C6.48 2 2 6.13 2 11.2c0 2.28.97 4.36 2.58 5.98L3 22l5.06-1.53A10.7 10.7 0 0 0 12 21.4c5.52 0 10-4.13 10-9.2S17.52 2 12 2z" />
+                    </svg>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="w-10 h-10">
+                      <rect x="3" y="3" width="18" height="18" rx="5" />
+                      <circle cx="12" cy="12" r="4" />
+                      <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
+                    </svg>
+                    <svg viewBox="0 0 24 24" fill="currentColor" class="w-10 h-10">
+                      <path
+                        d="M22 12a10 10 0 1 0-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.4h-1.2c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.4 2.9h-2.4v7A10 10 0 0 0 22 12z" />
+                    </svg>
+                  </div>
+                </div>
+                <div class="text-[19px] text-sky-500 font-bold mb-4 text-center">
+                  Ilimitados
+                </div>
+                <div class="bg-green-600 text-white py-8 w-full mb-4 text-center">
+                  <div class="text-[19px] font-black">$189</div>
+                  <div class="text-[19px] font-semibold">x3 meses</div>
+                </div>
+                <button
+                  class="border border-slate-800 rounded-full w-full py-2 mb-2 px-10 text-[19px] font-extrabold text-slate-800 hover:bg-slate-800 hover:text-white transition">
+                  Elegir plan
+                </button>
+              </div>
+
+              <!-- Pro 13 -->
+              <div class="flex-none min-w-[100px] bg-white p-2 shadow-lg flex flex-col items-center text-center">
+                <span class="bg-sky-400 text-white font-extrabold text-2xl  px-16 py-4 mb-2">
+                  Pro 13
+                </span>
+                <div class="bg-slate-800 text-white py-14 w-full mb-1.5 text-center">
+                  <div class="font-black text-[28px]">26 GB</div>
+                  <div class="text-[18px] font-semibold">para navegar</div>
+                </div>
+                <div class="text-slate-600 font-bold">
+                  <div class="flex items-center justify-center gap-1.5 my-1.5">
+                    <svg viewBox="0 0 24 24" fill="currentColor" class="w-10 h-10">
+                      <path
+                        d="M12 2C6.48 2 2 6.13 2 11.2c0 2.28.97 4.36 2.58 5.98L3 22l5.06-1.53A10.7 10.7 0 0 0 12 21.4c5.52 0 10-4.13 10-9.2S17.52 2 12 2z" />
+                    </svg>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="w-10 h-10">
+                      <rect x="3" y="3" width="18" height="18" rx="5" />
+                      <circle cx="12" cy="12" r="4" />
+                      <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
+                    </svg>
+                    <svg viewBox="0 0 24 24" fill="currentColor" class="w-10 h-10">
+                      <path
+                        d="M22 12a10 10 0 1 0-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.4h-1.2c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.4 2.9h-2.4v7A10 10 0 0 0 22 12z" />
+                    </svg>
+                  </div>
+                </div>
+                <div class="text-[19px] text-sky-500 font-bold mb-4 text-center">
+                  Ilimitados
+                </div>
+                <div class="bg-green-600 text-white py-8 w-full mb-4 text-center">
+                  <div class="text-[19px] font-black">$219</div>
+                  <div class="text-[19px] font-semibold">x3 meses</div>
+                </div>
+                <button
+                  class="border border-slate-800 rounded-full w-full py-2 mb-2 px-10 text-[19px] font-extrabold text-slate-800 hover:bg-slate-800 hover:text-white transition">
+                  Elegir plan
+                </button>
+              </div>
+
+              <!-- Pro 16 -->
+              <div class="flex-none min-w-[100px] bg-white p-2 shadow-lg flex flex-col items-center text-center">
+                <span class="bg-sky-400 text-white font-extrabold text-2xl  px-16 py-4 mb-2">
+                  Pro 16
+                </span>
+                <div class="bg-slate-800 text-white py-14 w-full mb-1.5 text-center">
+                  <div class="font-black text-[28px]">32 GB</div>
+                  <div class="text-[18px] font-semibold">para navegar</div>
+                </div>
+                <div class="text-slate-600 font-bold">
+                  <div class="flex items-center justify-center gap-1.5 my-1.5">
+                    <svg viewBox="0 0 24 24" fill="currentColor" class="w-10 h-10">
+                      <path
+                        d="M12 2C6.48 2 2 6.13 2 11.2c0 2.28.97 4.36 2.58 5.98L3 22l5.06-1.53A10.7 10.7 0 0 0 12 21.4c5.52 0 10-4.13 10-9.2S17.52 2 12 2z" />
+                    </svg>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="w-10 h-10">
+                      <rect x="3" y="3" width="18" height="18" rx="5" />
+                      <circle cx="12" cy="12" r="4" />
+                      <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
+                    </svg>
+                    <svg viewBox="0 0 24 24" fill="currentColor" class="w-10 h-10">
+                      <path
+                        d="M22 12a10 10 0 1 0-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.4h-1.2c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.4 2.9h-2.4v7A10 10 0 0 0 22 12z" />
+                    </svg>
+                  </div>
+                </div>
+                <div class="text-[19px] text-sky-500 font-bold mb-4 text-center">
+                  Ilimitados
+                </div>
+                <div class="bg-green-600 text-white py-8 w-full mb-4 text-center">
+                  <div class="text-[19px] font-black">$249</div>
+                  <div class="text-[19px] font-semibold">x3 meses</div>
+                </div>
+                <button
+                  class="border border-slate-800 rounded-full w-full py-2 mb-2 px-10 text-[19px] font-extrabold text-slate-800 hover:bg-slate-800 hover:text-white transition">
+                  Elegir plan
+                </button>
+              </div>
+
+              <!-- Pro 20 -->
+              <div class="flex-none min-w-[100px] bg-white p-2 shadow-lg flex flex-col items-center text-center">
+                <span class="bg-sky-400 text-white font-extrabold text-2xl  px-16 py-4 mb-2">
+                  Pro 20
+                </span>
+                <div class="bg-slate-800 text-white py-14 w-full mb-1.5 text-center">
+                  <div class="font-black text-[28px]">40 GB</div>
+                  <div class="text-[18px] font-semibold">para navegar</div>
+                </div>
+                <div class="text-slate-600 font-bold">
+                  <div class="flex items-center justify-center gap-1.5 my-1.5">
+                    <svg viewBox="0 0 24 24" fill="currentColor" class="w-10 h-10">
+                      <path
+                        d="M12 2C6.48 2 2 6.13 2 11.2c0 2.28.97 4.36 2.58 5.98L3 22l5.06-1.53A10.7 10.7 0 0 0 12 21.4c5.52 0 10-4.13 10-9.2S17.52 2 12 2z" />
+                    </svg>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="w-10 h-10">
+                      <rect x="3" y="3" width="18" height="18" rx="5" />
+                      <circle cx="12" cy="12" r="4" />
+                      <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
+                    </svg>
+                    <svg viewBox="0 0 24 24" fill="currentColor" class="w-10 h-10">
+                      <path
+                        d="M22 12a10 10 0 1 0-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.4h-1.2c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.4 2.9h-2.4v7A10 10 0 0 0 22 12z" />
+                    </svg>
+                  </div>
+                </div>
+                <div class="text-[19px] text-sky-500 font-bold mb-4 text-center">
+                  Ilimitados
+                </div>
+                <div class="bg-green-600 text-white py-8 w-full mb-4 text-center">
+                  <div class="text-[19px] font-black">$289</div>
+                  <div class="text-[19px] font-semibold">x3 meses</div>
+                </div>
+                <button
+                  class="border border-slate-800 rounded-full w-full py-2 mb-2 px-10 text-[19px] font-extrabold text-slate-800 hover:bg-slate-800 hover:text-white transition">
+                  Elegir plan
+                </button>
+              </div>
+
+              <!-- Pro 30 (destacado) -->
+              <div class="flex-none min-w-[100px] bg-fuchsia-800 p-2 shadow-lg flex flex-col items-center text-center">
+                <span class="bg-sky-400 text-white font-extrabold text-2xl  px-16 py-4 mb-2">
+                  Pro 30
+                </span>
+                <div class="bg-slate-800 text-white py-14 w-full mb-1.5 text-center">
+                  <div class="font-black text-[28px]">60 GB</div>
+                  <div class="text-[18px] font-semibold">para navegar</div>
+                </div>
+                <div class="text-slate-600 font-bold">
+                  <div class="flex items-center justify-center gap-1.5 my-1.5 text-white">
+                    <svg viewBox="0 0 24 24" fill="currentColor" class="w-10 h-10">
+                      <path
+                        d="M12 2C6.48 2 2 6.13 2 11.2c0 2.28.97 4.36 2.58 5.98L3 22l5.06-1.53A10.7 10.7 0 0 0 12 21.4c5.52 0 10-4.13 10-9.2S17.52 2 12 2z" />
+                    </svg>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="w-10 h-10">
+                      <rect x="3" y="3" width="18" height="18" rx="5" />
+                      <circle cx="12" cy="12" r="4" />
+                      <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
+                    </svg>
+                    <svg viewBox="0 0 24 24" fill="currentColor" class="w-10 h-10">
+                      <path
+                        d="M22 12a10 10 0 1 0-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.4h-1.2c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.4 2.9h-2.4v7A10 10 0 0 0 22 12z" />
+                    </svg>
+                    <svg viewBox="0 0 24 24" fill="currentColor" class="w-10 h-10">
+                      <path
+                        d="M21 16v-2l-8-5V3.5a1.5 1.5 0 0 0-3 0V9l-8 5v2l8-2.5V19l-2.5 1.5V22l4-1 4 1v-1.5L13 19v-5.5l8 2.5z" />
+                    </svg>
+                  </div>
+                </div>
+                <div class="text-[19px] text-white font-bold mb-4 text-center">
+                  Ilimitados
+                </div>
+                <div class="bg-green-600 text-white py-8 w-full mb-4 text-center">
+                  <div class="text-[19px] font-black">$349</div>
+                  <div class="text-[19px] font-semibold">x3 meses</div>
+                </div>
+                <button
+                  class="border border-slate-800 rounded-full w-full py-2 mb-2 px-10 text-[19px] font-extrabold text-white hover:bg-slate-800 hover:text-white transition">
+                  Elegir plan
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- ===== Portabilidad ===== -->
+        <div id="porta" class="tab-content hidden">
+          <div class="max-w-6xl mx-auto py-3 px-2 space-y-10">
+            <div class="reveal reveal-zoom relative bg-white border-white p-4 shadow-2xl">
+              <div
+                class="inline-block bg-[#7fc538] min-w-[100%] text-white text-center px-8 py-4 font-black text-2xlshadow">
+                <span class="text-5xl font-bold align-middle ml-1"> Pro Ilimitado 60</span>
+              </div>
+              <div class="bg-white p-10 flex flex-wrap gap-6 justify-center items-stretch">
+                <div
+                  class="flex-1 min-w-[100%] bg-[#7fc538] text-white rounded-xl p-2 flex flex-col items-center justify-center">
+                  <span class="italic font-semibold text-[20px]">ilimitados</span>
+                  <span class="font-black text-[40px] mt-1">PUJ 60 GB</span>
+                  <span class="text-[20px] font-semibold mt-1">para navegar</span>
+                </div>
+                <div class="flex-1 min-w-[100px] flex flex-col gap-2">
+                  <div
+                    class="bg-slate-800 text-white rounded-lg py-2 px-2 text-center font-bold text-sm italic flex items-center justify-center gap-1.5">
+                    <svg viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5 flex-shrink-0">
+                      <path
+                        d="M21 16v-2l-8-5V3.5a1.5 1.5 0 0 0-3 0V9l-8 5v2l8-2.5V19l-2.5 1.5V22l4-1 4 1v-1.5L13 19v-5.5l8 2.5z" />
+                    </svg>
+                    <h2 class="text-2xl">Pasaporte Movistar</h2>
+                  </div>
+                  <div
+                    class="bg-sky-50 border border-sky-200 rounded-lg py-2 px-2 text-center leading-tight text-slate-700">
+                    <svg viewBox="0 0 24 24" fill="currentColor" class="w-10 h-10 inline-block align-text-bottom mr-1">
+                      <path d="M4 4h16v12H7l-3 3V4z" />
+                    </svg>
+                    <h2 class="text-xl">
+                      México, EUA, Canadá, Pto. Rico<br>
+                      <strong>Ilimitados</strong>
+                    </h2>
+                  </div>
+                </div>
+                <div
+                  class="flex-1 min-w-[100px] bg-[#7fc538] text-white rounded-xl p-4 flex flex-col items-center justify-center">
+                  <span class="font-black text-[45px]">$300<span class="text-xs font-bold">/mes</span></span>
+                </div>
+              </div>
+              <button
+                class="mt-5 w-2/3 mx-auto block bg-white border-2 border-slate-800 rounded-full py-2.5 font-extrabold text-slate-800 hover:bg-slate-800 hover:text-white transition">
+                Elegir plan
+              </button>
+            </div>
+
+            <div class="reveal reveal-stagger relative flex gap-2 overflow-x-auto no-scrollbar pb-2 justify-center">
+              <!-- Pro 11 -->
+              <div class="flex-none min-w-[100px] bg-white p-2 shadow-lg flex flex-col items-center text-center">
+                <span class="bg-sky-400 text-white font-extrabold text-2xl  px-16 py-4 mb-2">
+                  Pro 11
+                </span>
+                <div class="bg-slate-800 text-white py-14 w-full mb-1.5 text-center">
+                  <div class="font-black text-[28px]">22 GB</div>
+                  <div class="text-[18px] font-semibold">para navegar</div>
+                </div>
+                <div class="text-slate-600 font-bold">
+                  <div class="flex items-center justify-center gap-1.5 my-1.5">
+                    <svg viewBox="0 0 24 24" fill="currentColor" class="w-10 h-10">
+                      <path
+                        d="M12 2C6.48 2 2 6.13 2 11.2c0 2.28.97 4.36 2.58 5.98L3 22l5.06-1.53A10.7 10.7 0 0 0 12 21.4c5.52 0 10-4.13 10-9.2S17.52 2 12 2z" />
+                    </svg>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="w-10 h-10">
+                      <rect x="3" y="3" width="18" height="18" rx="5" />
+                      <circle cx="12" cy="12" r="4" />
+                      <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
+                    </svg>
+                    <svg viewBox="0 0 24 24" fill="currentColor" class="w-10 h-10">
+                      <path
+                        d="M22 12a10 10 0 1 0-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.4h-1.2c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.4 2.9h-2.4v7A10 10 0 0 0 22 12z" />
+                    </svg>
+                  </div>
+                </div>
+                <div class="text-[19px] text-sky-500 font-bold mb-4 text-center">
+                  Ilimitados
+                </div>
+                <div class="bg-green-600 text-white py-8 w-full mb-4 text-center">
+                  <div class="text-[19px] font-black">$105</div>
+                  <div class="text-[19px] font-semibold">x3 meses</div>
+                </div>
+                <button
+                  class="border border-slate-800 rounded-full w-full py-2 mb-2 px-10 text-[19px] font-extrabold text-slate-800 hover:bg-slate-800 hover:text-white transition">
+                  Elegir plan
+                </button>
+              </div>
+
+              <!-- Pro 13 -->
+              <div class="flex-none min-w-[100px] bg-white p-2 shadow-lg flex flex-col items-center text-center">
+                <span class="bg-sky-400 text-white font-extrabold text-2xl  px-16 py-4 mb-2">
+                  Pro 13
+                </span>
+                <div class="bg-slate-800 text-white py-14 w-full mb-1.5 text-center">
+                  <div class="font-black text-[28px]">26 GB</div>
+                  <div class="text-[18px] font-semibold">para navegar</div>
+                </div>
+                <div class="text-slate-600 font-bold">
+                  <div class="flex items-center justify-center gap-1.5 my-1.5">
+                    <svg viewBox="0 0 24 24" fill="currentColor" class="w-10 h-10">
+                      <path
+                        d="M12 2C6.48 2 2 6.13 2 11.2c0 2.28.97 4.36 2.58 5.98L3 22l5.06-1.53A10.7 10.7 0 0 0 12 21.4c5.52 0 10-4.13 10-9.2S17.52 2 12 2z" />
+                    </svg>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="w-10 h-10">
+                      <rect x="3" y="3" width="18" height="18" rx="5" />
+                      <circle cx="12" cy="12" r="4" />
+                      <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
+                    </svg>
+                    <svg viewBox="0 0 24 24" fill="currentColor" class="w-10 h-10">
+                      <path
+                        d="M22 12a10 10 0 1 0-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.4h-1.2c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.4 2.9h-2.4v7A10 10 0 0 0 22 12z" />
+                    </svg>
+                  </div>
+                </div>
+                <div class="text-[19px] text-sky-500 font-bold mb-4 text-center">
+                  Ilimitados
+                </div>
+                <div class="bg-green-600 text-white py-8 w-full mb-4 text-center">
+                  <div class="text-[19px] font-black">$120</div>
+                  <div class="text-[19px] font-semibold">x3 meses</div>
+                </div>
+                <button
+                  class="border border-slate-800 rounded-full w-full py-2 mb-2 px-10 text-[19px] font-extrabold text-slate-800 hover:bg-slate-800 hover:text-white transition">
+                  Elegir plan
+                </button>
+              </div>
+
+              <!-- Pro 16 -->
+              <div class="flex-none min-w-[100px] bg-white p-2 shadow-lg flex flex-col items-center text-center">
+                <span class="bg-sky-400 text-white font-extrabold text-2xl  px-16 py-4 mb-2">
+                  Pro 16
+                </span>
+                <div class="bg-slate-800 text-white py-14 w-full mb-1.5 text-center">
+                  <div class="font-black text-[28px]">32 GB</div>
+                  <div class="text-[18px] font-semibold">para navegar</div>
+                </div>
+                <div class="text-slate-600 font-bold">
+                  <div class="flex items-center justify-center gap-1.5 my-1.5">
+                    <svg viewBox="0 0 24 24" fill="currentColor" class="w-10 h-10">
+                      <path
+                        d="M12 2C6.48 2 2 6.13 2 11.2c0 2.28.97 4.36 2.58 5.98L3 22l5.06-1.53A10.7 10.7 0 0 0 12 21.4c5.52 0 10-4.13 10-9.2S17.52 2 12 2z" />
+                    </svg>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="w-10 h-10">
+                      <rect x="3" y="3" width="18" height="18" rx="5" />
+                      <circle cx="12" cy="12" r="4" />
+                      <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
+                    </svg>
+                    <svg viewBox="0 0 24 24" fill="currentColor" class="w-10 h-10">
+                      <path
+                        d="M22 12a10 10 0 1 0-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.4h-1.2c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.4 2.9h-2.4v7A10 10 0 0 0 22 12z" />
+                    </svg>
+                  </div>
+                </div>
+                <div class="text-[19px] text-sky-500 font-bold mb-4 text-center">
+                  Ilimitados
+                </div>
+                <div class="bg-green-600 text-white py-8 w-full mb-4 text-center">
+                  <div class="text-[19px] font-black">$135</div>
+                  <div class="text-[19px] font-semibold">x3 meses</div>
+                </div>
+                <button
+                  class="border border-slate-800 rounded-full w-full py-2 mb-2 px-10 text-[19px] font-extrabold text-slate-800 hover:bg-slate-800 hover:text-white transition">
+                  Elegir plan
+                </button>
+              </div>
+
+              <!-- Pro 20 -->
+              <div class="flex-none min-w-[100px] bg-white p-2 shadow-lg flex flex-col items-center text-center">
+                <span class="bg-sky-400 text-white font-extrabold text-2xl  px-16 py-4 mb-2">
+                  Pro 20
+                </span>
+                <div class="bg-slate-800 text-white py-14 w-full mb-1.5 text-center">
+                  <div class="font-black text-[28px]">40 GB</div>
+                  <div class="text-[18px] font-semibold">para navegar</div>
+                </div>
+                <div class="text-slate-600 font-bold">
+                  <div class="flex items-center justify-center gap-1.5 my-1.5">
+                    <svg viewBox="0 0 24 24" fill="currentColor" class="w-10 h-10">
+                      <path
+                        d="M12 2C6.48 2 2 6.13 2 11.2c0 2.28.97 4.36 2.58 5.98L3 22l5.06-1.53A10.7 10.7 0 0 0 12 21.4c5.52 0 10-4.13 10-9.2S17.52 2 12 2z" />
+                    </svg>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="w-10 h-10">
+                      <rect x="3" y="3" width="18" height="18" rx="5" />
+                      <circle cx="12" cy="12" r="4" />
+                      <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
+                    </svg>
+                    <svg viewBox="0 0 24 24" fill="currentColor" class="w-10 h-10">
+                      <path
+                        d="M22 12a10 10 0 1 0-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.4h-1.2c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.4 2.9h-2.4v7A10 10 0 0 0 22 12z" />
+                    </svg>
+                  </div>
+                </div>
+                <div class="text-[19px] text-sky-500 font-bold mb-4 text-center">
+                  Ilimitados
+                </div>
+                <div class="bg-green-600 text-white py-8 w-full mb-4 text-center">
+                  <div class="text-[19px] font-black">$155</div>
+                  <div class="text-[19px] font-semibold">x3 meses</div>
+                </div>
+                <button
+                  class="border border-slate-800 rounded-full w-full py-2 mb-2 px-10 text-[19px] font-extrabold text-slate-800 hover:bg-slate-800 hover:text-white transition">
+                  Elegir plan
+                </button>
+              </div>
+
+              <!-- Pro 30 (destacado) -->
+              <div class="flex-none min-w-[100px] bg-fuchsia-800 p-2 shadow-lg flex flex-col items-center text-center">
+                <span class="bg-sky-400 text-white font-extrabold text-2xl  px-16 py-4 mb-2">
+                  Pro 30
+                </span>
+                <div class="bg-slate-800 text-white py-14 w-full mb-1.5 text-center">
+                  <div class="font-black text-[28px]">60 GB</div>
+                  <div class="text-[18px] font-semibold">para navegar</div>
+                </div>
+                <div class="text-slate-600 font-bold">
+                  <div class="flex items-center justify-center gap-1.5 my-1.5 text-white">
+                    <svg viewBox="0 0 24 24" fill="currentColor" class="w-10 h-10">
+                      <path
+                        d="M12 2C6.48 2 2 6.13 2 11.2c0 2.28.97 4.36 2.58 5.98L3 22l5.06-1.53A10.7 10.7 0 0 0 12 21.4c5.52 0 10-4.13 10-9.2S17.52 2 12 2z" />
+                    </svg>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="w-10 h-10">
+                      <rect x="3" y="3" width="18" height="18" rx="5" />
+                      <circle cx="12" cy="12" r="4" />
+                      <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
+                    </svg>
+                    <svg viewBox="0 0 24 24" fill="currentColor" class="w-10 h-10">
+                      <path
+                        d="M22 12a10 10 0 1 0-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.4h-1.2c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.4 2.9h-2.4v7A10 10 0 0 0 22 12z" />
+                    </svg>
+                    <svg viewBox="0 0 24 24" fill="currentColor" class="w-10 h-10">
+                      <path
+                        d="M21 16v-2l-8-5V3.5a1.5 1.5 0 0 0-3 0V9l-8 5v2l8-2.5V19l-2.5 1.5V22l4-1 4 1v-1.5L13 19v-5.5l8 2.5z" />
+                    </svg>
+                  </div>
+                </div>
+                <div class="text-[19px] text-white font-bold mb-4 text-center">
+                  Ilimitados
+                </div>
+                <div class="bg-green-600 text-white py-8 w-full mb-4 text-center">
+                  <div class="text-[19px] font-black">$185</div>
+                  <div class="text-[19px] font-semibold">x3 meses</div>
+                </div>
+                <button
+                  class="border border-slate-800 rounded-full w-full py-2 mb-2 px-10 text-[19px] font-extrabold text-white hover:bg-slate-800 hover:text-white transition">
+                  Elegir plan
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!--- Informate --->
+  <section>
+    <div class="mx-auto bg-[#1298E0]">
+      <div class="flex items-center justify-between reveal">
+        <div class="flex-1 flex justify-start"></div>
+        <div
+          class="overflow-hidden px-4 py-6 sm:py-8 flex flex-col items-center justify-center min-h-[160px] sm:min-h-[200px]">
+          <h3 class="text-5xl sm:text-4xl md:text-5xl lg:text-5xl
+          font-black text-white text-center leading-tight
+          border-4 rounded-2xl px-6 sm:px-8 py-3 sm:py-4">
+            Infórmate
+          </h3>
+          <div class="w-40 sm:w-56 md:w-24 h-1 bg-white mt-4 sm:mt-6 rounded-full"></div>
+        </div>
+        <div class="flex-1 flex justify-end"></div>
+      </div>
+      <div
+        class="reveal reveal-stagger grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 w-[80%] sm:w-[90%] max-w-5xl mx-auto gap-6 md:gap-8 py-4 sm:py-4">
+        <!-- ¿Qué es una eSIM? -->
+        <div
+          class="bg-white shadow-sm hover:shadow-lg transition-shadow overflow-hidden flex flex-col mx-auto w-full max-w-[250px]">
+          <div class="video-wrap relative w-full aspect-[9/16] bg-black cursor-pointer">
+            <video class="absolute inset-0 w-full border-4 border-white h-full object-cover" src="image/que-es-esim.mp4"
+              poster="image/que-es-esim-poster.jpg" muted playsinline preload="metadata">
+            </video>
+            <button type="button" class="play-btn absolute inset-0 flex items-center justify-center"
+              aria-label="Reproducir video">
+              <span
+                class="flex items-center justify-center w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-white/90 shadow-md hover:bg-white transition-colors">
+                <svg viewBox="0 0 24 24" class="w-7 h-7 sm:w-8 sm:h-8 text-[#7fc538] ml-1" fill="currentColor">
+                  <path d="M8 5v14l11-7z" />
+                </svg>
+              </span>
+            </button>
+          </div>
+          <p class="text-center text-white bg-[#7fc538] text-sm sm:text-base font-semibold text-gray-700 py-6 px-2">
+            ¿Qué es una eSIM?
+          </p>
+        </div>
+
+        <!-- Documentación Movistar eSIM -->
+        <div
+          class="bg-white shadow-sm hover:shadow-lg transition-shadow overflow-hidden flex flex-col mx-auto w-full max-w-[250px]">
+          <div class="video-wrap relative w-full aspect-[9/16] bg-black cursor-pointer">
+            <video class="absolute inset-0 w-full h-full border-4 border-white object-cover"
+              src="image/doc-movistar-esim.mp4" poster="image/doc-movistar-esim-poster.jpg" muted playsinline
+              preload="metadata">
+            </video>
+            <button type="button" class="play-btn absolute inset-0 flex items-center justify-center"
+              aria-label="Reproducir video">
+              <span
+                class="flex items-center justify-center w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-white/90 shadow-md hover:bg-white transition-colors">
+                <svg viewBox="0 0 24 24" class="w-7 h-7 sm:w-8 sm:h-8 text-[#7fc538] ml-1" fill="currentColor">
+                  <path d="M8 5v14l11-7z" />
+                </svg>
+              </span>
+            </button>
+          </div>
+          <p class="text-center text-white bg-[#7fc538] text-sm sm:text-base font-semibold text-gray-700 py-3 px-2">
+            Documentación eSIM Movistar
+          </p>
+        </div>
+
+        <!-- Documentación Movistar -->
+        <div
+          class="bg-white shadow-sm hover:shadow-lg transition-shadow overflow-hidden flex flex-col mx-auto w-full max-w-[250px] sm:col-span-2 md:col-span-1">
+          <div class="video-wrap relative w-full aspect-[9/16] bg-black cursor-pointer">
+            <video class="absolute inset-0 w-full border-4 border-white h-full object-cover"
+              src="image/doc-movistar.mp4" poster="image/doc-movistar-poster.jpg" muted playsinline preload="metadata">
+            </video>
+            <button type="button" class="play-btn absolute inset-0 flex items-center justify-center"
+              aria-label="Reproducir video">
+              <span
+                class="flex items-center justify-center w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-white/90 shadow-md hover:bg-white transition-colors">
+                <svg viewBox="0 0 24 24" class="w-7 h-7 sm:w-8 sm:h-8 text-[#7fc538] ml-1" fill="currentColor">
+                  <path d="M8 5v14l11-7z" />
+                </svg>
+              </span>
+            </button>
+          </div>
+          <p class="text-center text-white bg-[#7fc538] text-sm sm:text-base font-semibold text-gray-700 py-6 px-2">
+            Documentación Movistar
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- --Cámbiate a Movistar-- -->
+  <section class="relative overflow-hidden bg-cover bg-center bg-fixed">
+    <div class="relative z-10 max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 px-8 py-6 items-center">
+      <div class="reveal reveal-left flex items-center justify-center">
+        <img src="image/banner-cambiate.png" alt="Cámbiate a Movistar sin perder tu número" class="w-full rounded-2xl">
+      </div>
+      <div class="reveal reveal-right flex flex-col gap-8 rounded-2xl py-28">
+        <p class="text-pink-600 font-extrabold text-4xl text-center leading-snug">
+          Disfruta una mejor experiencia con beneficios pensados para mantenerte siempre conectado.
+        </p>
+        <div class="grid grid-cols-3 gap-2 sm:gap-4 lg:gap-6 text-center">
+          <div class="flex justify-center">
+            <img src="image/cambiate1.png" class="w-36 sm:w-36 lg:w-36 h-auto object-contain" alt="">
+          </div>
+          <div class="flex justify-center">
+            <img src="image/cambiate2.png" class="w-36 sm:w-36 lg:w-36 h-auto object-contain" alt="">
+          </div>
+          <div class="flex justify-center">
+            <img src="image/cambiate3.png" class="w-36 sm:w-36 lg:w-36 h-auto object-contain" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Olas -->
+    <div class="absolute bottom-0 left-0 w-full overflow-hidden leading-none">
+      <svg class="block w-full h-28" viewBox="0 0 1440 170" preserveAspectRatio="none">
+        <path fill="#1298E0"
+          d="M0,96L40,106.7C80,117,160,139,240,133.3C320,128,400,96,480,90.7C560,85,640,107,720,122.7C800,139,880,149,960,133.3C1040,117,1120,75,1200,69.3C1280,64,1360,96,1400,112L1440,128L1440,170L0,170Z">
+        </path>
+      </svg>
+    </div>
+    <div class="absolute top-0 left-0 w-full overflow-hidden leading-none rotate-180">
+      <svg class="block w-full h-28" viewBox="0 0 1440 170" preserveAspectRatio="none">
+        <path fill="#1298E0"
+          d="M0,96L40,106.7C80,117,160,139,240,133.3C320,128,400,96,480,90.7C560,85,640,107,720,122.7C800,139,880,149,960,133.3C1040,117,1120,75,1200,69.3C1280,64,1360,96,1400,112L1440,128L1440,170L0,170Z">
+        </path>
+      </svg>
+    </div>
+  </section>
+
+  <!--- Cambiate --->
+  <section class="relative bg-[#1298E0] overflow-hidden">
+    <div class="max-w-7xl mx-auto grid grid-cols-2 items-end gap-2">
+      <div class="reveal reveal-left flex justify-center">
+        <img src="image/avatar-2.png" alt="Avatar" class="w-[90%] md:w-[85%] lg:w-[100%] h-auto">
+      </div>
+      <div class="reveal reveal-right flex justify-center">
+        <a
+          href="https://wa.me/5667656925?text=Hola%2C%20me%20gustar%C3%ADa%20solicitar%20informaci%C3%B3n%20sobre%20los%20planes%20Movistar.">
+          <img src="image/banner-3.png" alt="Banner" class="w-[90%] md:w-[85%] lg:w-[100%] h-auto">
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!--- footer --->
+  <section class="relative bg-[#1298E0] overflow-hidden">
+    <div class="relative max-w-7xl mx-auto px-5 sm:px-10 lg:px-16 py-8 sm:py-14 lg:py-3">
+      <div class="reveal grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-8 items-center text-center sm:text-left">
+        <div>
+          <h2 class="text-white font-extrabold leading-[1.05] drop-shadow-lg
+                   text-[clamp(1.75rem,8vw,4.5rem)]">
+            ¿Tienes alguna<br>
+            pregunta?
+          </h2>
+        </div>
+        <div class="sm:text-right">
+          <p class="text-white font-bold leading-relaxed drop-shadow-lg
+                  text-[clamp(1rem,4vw,1.9rem)]">
+            Escríbenos por WhatsApp<br>
+            y recibe una atención<br>
+            rápida, cercana y<br>
+            personalizada.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="relative w-full leading-none overflow-hidden">
+      <img src="image/avatar-footer.png" alt="Avatar"
+        class="w-[140%] max-w-none -ml-[20%] sm:w-full sm:max-w-full sm:ml-0 h-auto block">
+    </div>
+  </section>
+
+  <!-- Botón flotante WhatsApp -->
+  <a href="https://wa.me/521XXXXXXXXXX?text=Hola%2C%20me%20gustar%C3%ADa%20solicitar%20informaci%C3%B3n%20sobre%20los%20planes%20Movistar."
+    target="_blank" id="whatsapp-btn" style="
+     position: fixed;
+     bottom: 28px;
+     right: 28px;
+     z-index: 9999;
+     display: flex;
+     align-items: center;
+     gap: 10px;
+     background: #7fc538;
+     color: white;
+     font-weight: 700;
+     font-size: 0.9rem;
+     text-decoration: none;
+     padding: 13px 29px 13px 16px;
+     border-radius: 50px;
+     box-shadow: 0 6px 24px #7fc538;
+     transition: transform 0.2s ease, box-shadow 0.2s ease;
+   " onmouseover="this.style.transform='scale(1.06)';this.style.boxShadow='0 10px 30px rgba(37,211,102,0.55)'"
+    onmouseout="this.style.transform='scale(1)';this.style.boxShadow='0 6px 24px rgba(37,211,102,0.45)'">
+    <!-- Ícono WhatsApp SVG -->
+    <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="white">
+      <path
+        d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" />
+      <path
+        d="M12 0C5.373 0 0 5.373 0 12c0 2.112.549 4.093 1.508 5.817L.057 23.428a.5.5 0 0 0 .606.65l5.758-1.51A11.943 11.943 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 0 1-5.006-1.374l-.36-.213-3.416.896.912-3.33-.234-.38A9.818 9.818 0 0 1 2.182 12C2.182 6.57 6.57 2.182 12 2.182S21.818 6.57 21.818 12 17.43 21.818 12 21.818z" />
+    </svg>
+    <span>Solicitar información</span>
+  </a>
+
+
+  <script>
+    document.querySelectorAll('.video-wrap').forEach(function (wrap) {
+      var video = wrap.querySelector('video');
+      var btn = wrap.querySelector('.play-btn');
+      var previewDone = false;
+
+      function showButton() {
+        btn.style.display = 'flex';
+      }
+      function hideButton() {
+        btn.style.display = 'none';
+      }
+      function playPreview() {
+        if (previewDone) return;
+        video.muted = true;
+        video.currentTime = 0;
+        var playAttempt = video.play();
+        if (playAttempt && playAttempt.catch) {
+          playAttempt.catch(function () {
+            video.currentTime = 0.1;
+          });
+        }
+        setTimeout(function () {
+          if (!video.paused && !video.seeking && video.currentTime < 5) {
+            video.pause();
+          }
+          previewDone = true;
+        }, 500);
+      }
+
+      if (video.readyState >= 2) {
+        playPreview();
+      } else {
+        video.addEventListener('loadeddata', playPreview, { once: true });
+      }
+
+      btn.addEventListener('click', function () {
+        previewDone = true;
+        video.currentTime = 0;
+        video.muted = false;
+        video.controls = true;
+        video.play();
+        hideButton();
+      });
+
+      video.addEventListener('pause', function () {
+        if (previewDone) showButton();
+      });
+      video.addEventListener('ended', showButton);
+      video.addEventListener('play', function () {
+        if (previewDone) hideButton();
+      });
+    });
+
+
+    const botones = document.querySelectorAll(".tab-btn");
+    const contenidos = document.querySelectorAll(".tab-content");
+
+    botones.forEach(boton => {
+
+      boton.addEventListener("click", () => {
+        contenidos.forEach(c => c.classList.add("hidden"));
+        botones.forEach(btn => {
+          btn.classList.remove("border-write", "text-white");
+          btn.classList.add("border-transparent", "text-white");
+        });
+
+        boton.classList.remove("border-transparent", "text-white");
+        boton.classList.add("border-write", "text-white");
+        document.getElementById(boton.dataset.tab).classList.remove("hidden");
+
+      });
+
+    });
+
+    // ============================
+    // ANIMACIONES AL HACER SCROLL
+    // ============================
+    (function () {
+      var elementos = document.querySelectorAll('.reveal');
+
+      if (!('IntersectionObserver' in window)) {
+        elementos.forEach(function (el) { el.classList.add('is-visible'); });
+        return;
+      }
+
+      var observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, {
+        threshold: 0.15,
+        rootMargin: '0px 0px -60px 0px'
+      });
+
+      elementos.forEach(function (el) {
+        observer.observe(el);
+      });
+
+      document.querySelectorAll('.tab-btn').forEach(function (boton) {
+        boton.addEventListener('click', function () {
+          var panel = document.getElementById(boton.dataset.tab);
+          if (!panel) return;
+          panel.querySelectorAll('.reveal').forEach(function (el) {
+            if (!el.classList.contains('is-visible')) {
+              observer.observe(el);
+            }
+          });
+        });
+      });
+    })();
+  </script>
+</body>
+
+</html>
