@@ -209,30 +209,33 @@
   </section>
 
   <!--- Servicios --->
-  <section class="px-4 sm:px-6 lg:px-8 py-8">
+  <section class="px-3 sm:px-6 lg:px-8 py-5 sm:py-8">
     <div class="mx-auto max-w-7xl">
       <div class="flex items-center justify-between reveal">
         <div class="flex-1 flex justify-start">
           <img src="image/bocina-der.png" alt="Izquierda" class="hidden sm:block w-16 md:w-28 lg:w-56 xl:w-80 h-auto">
         </div>
         <div
-          class="overflow-hidden px-2 sm:px-4 py-6 sm:py-8 flex flex-col items-center justify-center min-h-[160px] sm:min-h-[220px]">
-          <h3 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl
-          font-black text-[#2AACE2] text-center
-          leading-tight">
+          class="overflow-hidden px-2 sm:px-4 py-3 sm:py-8 flex flex-col items-center justify-center min-h-[110px] sm:min-h-[220px]">
+          <h3 class="text-5xl xs:text-3xl sm:text-7xl md:text-7xl lg:text-7xl xl:text-7xl
+        font-black text-[#2AACE2] text-center
+        leading-tight px-2">
             CONECTANDO<br>CONTIGO
           </h3>
-          <div class="w-40 sm:w-56 md:w-72 h-1 bg-[#2AACE2] mt-4 sm:mt-6 rounded-full"></div>
+          <div class="w-28 sm:w-56 md:w-72 h-1 bg-[#2AACE2] mt-3 sm:mt-6 rounded-full"></div>
         </div>
         <div class="flex-1 flex justify-end">
           <img src="image/bocina-izq.png" alt="Derecha" class="hidden sm:block w-16 md:w-28 lg:w-56 xl:w-80 h-auto">
         </div>
       </div>
       <div
-        class="reveal reveal-stagger grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 w-full sm:w-[90%] mx-auto gap-6 sm:gap-8 mt-8">
-        <img src="image/planes_renta.png" alt="Planes de renta" class="w-full h-auto object-contain rounded-lg">
-        <img src="image/esim.png" alt="Portabilidad" class="w-full h-auto object-contain rounded-lg">
-        <img src="image/cambiate.png" alt="eSIM" class="w-full h-auto object-contain rounded-lg">
+        class="reveal reveal-stagger grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 w-full sm:w-[90%] mx-auto gap-4 sm:gap-8 mt-5 sm:mt-8">
+        <img src="image/planes_renta.png" alt="Planes de renta"
+          class="w-full h-auto object-contain rounded-lg shadow-sm sm:shadow-none">
+        <img src="image/esim.png" alt="Portabilidad"
+          class="w-full h-auto object-contain rounded-lg shadow-sm sm:shadow-none">
+        <img src="image/cambiate.png" alt="eSIM"
+          class="w-full h-auto object-contain rounded-lg shadow-sm sm:shadow-none">
       </div>
     </div>
   </section>
@@ -243,14 +246,14 @@
     style="background-image:url('image/fondo-nubes.jpg')">
     <!-- Olas -->
     <div class="absolute top-0 left-0 w-full overflow-hidden leading-none rotate-180 z-0">
-      <svg class="block w-full h-28" viewBox="0 0 1440 170" preserveAspectRatio="none">
+      <svg class="block w-full h-16 sm:h-28" viewBox="0 0 1440 170" preserveAspectRatio="none">
         <path fill="#ffffff"
           d="M0,96L40,106.7C80,117,160,139,240,133.3C320,128,400,96,480,90.7C560,85,640,107,720,122.7C800,139,880,149,960,133.3C1040,117,1120,75,1200,69.3C1280,64,1360,96,1400,112L1440,128L1440,170L0,170Z">
         </path>
       </svg>
     </div>
     <div class="absolute bottom-0 left-0 w-full overflow-hidden leading-none z-0">
-      <svg class="block w-full h-28" viewBox="0 0 1440 170" preserveAspectRatio="none">
+      <svg class="block w-full h-16 sm:h-28" viewBox="0 0 1440 170" preserveAspectRatio="none">
         <path fill="#1298E0"
           d="M0,96L40,106.7C80,117,160,139,240,133.3C320,128,400,96,480,90.7C560,85,640,107,720,122.7C800,139,880,149,960,133.3C1040,117,1120,75,1200,69.3C1280,64,1360,96,1400,112L1440,128L1440,170L0,170Z">
         </path>
@@ -258,524 +261,574 @@
     </div>
 
     <!-- Contenido -->
-    <div class="relative z-10 max-w-7xl mx-auto px-6 pt-32 pb-32">
-      <div class="reveal overflow-hidden px-4 py-8 flex flex-col items-center justify-center">
-        <h3 class="text-5xl sm:text-5xl md:text-5xl lg:text-6xl xl:text-5xl
-            font-black text-[#ffffff] text-center
-            leading-tight">
+    <div class="relative z-10 max-w-7xl mx-auto px-3 sm:px-6 pt-16 sm:pt-32 pb-16 sm:pb-32">
+      <div class="reveal overflow-hidden px-2 sm:px-4 py-4 sm:py-8 flex flex-col items-center justify-center">
+        <h3 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-5xl
+          font-black text-[#ffffff] text-center
+          leading-tight px-2">
           Elige el plan que mejor se adapta a ti
         </h3>
-        <div class="w-72 h-1 bg-[#ffffff] mt-6 rounded-full"></div>
+        <div class="w-40 sm:w-72 h-1 bg-[#ffffff] mt-4 sm:mt-6 rounded-full"></div>
       </div>
+
       <div class="overflow-hidden">
         <div class="flex">
           <button
-            class="tab-btn flex-1 py-5 text-lg font-semibold border-b-4 border-write hover:text-black text-white transition"
+            class="tab-btn flex-1 py-3 sm:py-5 text-sm sm:text-lg font-semibold border-b-4 border-write hover:text-black text-white transition"
             data-tab="linea">
             Línea Nueva
           </button>
           <button
-            class="tab-btn flex-1 py-5 text-lg font-semibold border-b-4 border-transparent text-white hover:text-black transition"
+            class="tab-btn flex-1 py-3 sm:py-5 text-sm sm:text-lg font-semibold border-b-4 border-transparent text-white hover:text-black transition"
             data-tab="porta">
             Portabilidad
           </button>
         </div>
       </div>
+
       <div>
         <!-- ===== Línea Nueva ===== -->
         <div id="linea" class="tab-content">
-          <div class="max-w-6xl mx-auto py-3 px-2 space-y-10">
-            <div class="reveal reveal-zoom relative bg-white border-white p-4 shadow-2xl">
+          <div class="max-w-6xl mx-auto py-3 px-1 sm:px-2 space-y-6 sm:space-y-10">
+
+            <!-- Tarjeta principal destacada -->
+            <div class="reveal reveal-zoom relative bg-white border-white p-2 sm:p-4 shadow-2xl">
               <div
-                class="inline-block bg-[#7fc538] min-w-[100%] text-white text-center px-8 py-4 font-black text-2xlshadow">
-                <span class="text-5xl font-bold align-middle ml-1"> Pro Ilimitado 60</span>
+                class="inline-block bg-[#7fc538] min-w-[100%] text-white text-center px-3 sm:px-8 py-3 sm:py-4 font-black shadow">
+                <span class="text-2xl sm:text-4xl md:text-5xl font-bold align-middle ml-1">Pro Ilimitado 60</span>
               </div>
-              <div class="bg-white p-10 flex flex-wrap gap-6 justify-center items-stretch">
+              <div class="bg-white p-4 sm:p-10 flex flex-wrap gap-3 sm:gap-6 justify-center items-stretch">
                 <div
-                  class="flex-1 min-w-[100%] bg-[#7fc538] text-white rounded-xl p-2 flex flex-col items-center justify-center">
-                  <span class="italic font-semibold text-[20px]">ilimitados</span>
-                  <span class="font-black text-[40px] mt-1">PUJ 60 GB</span>
-                  <span class="text-[20px] font-semibold mt-1">para navegar</span>
+                  class="w-full bg-[#7fc538] text-white rounded-xl p-4 sm:p-2 flex flex-col items-center justify-center">
+                  <span class="italic font-semibold text-base sm:text-[20px]">ilimitados</span>
+                  <span class="font-black text-3xl sm:text-[40px] mt-1">PUJ 60 GB</span>
+                  <span class="text-base sm:text-[20px] font-semibold mt-1">para navegar</span>
                 </div>
-                <div class="flex-1 min-w-[100px] flex flex-col gap-2">
+                <div class="w-full sm:flex-1 flex flex-col gap-2">
                   <div
                     class="bg-slate-800 text-white rounded-lg py-2 px-2 text-center font-bold text-sm italic flex items-center justify-center gap-1.5">
-                    <svg viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5 flex-shrink-0">
+                    <svg viewBox="0 0 24 24" fill="currentColor" class="w-4 h-4 sm:w-5 sm:h-5 flex-shrink-0">
                       <path
                         d="M21 16v-2l-8-5V3.5a1.5 1.5 0 0 0-3 0V9l-8 5v2l8-2.5V19l-2.5 1.5V22l4-1 4 1v-1.5L13 19v-5.5l8 2.5z" />
                     </svg>
-                    <h2 class="text-2xl">Pasaporte Movistar</h2>
+                    <h2 class="text-base sm:text-2xl">Pasaporte Movistar</h2>
                   </div>
                   <div
                     class="bg-sky-50 border border-sky-200 rounded-lg py-2 px-2 text-center leading-tight text-slate-700">
-                    <svg viewBox="0 0 24 24" fill="currentColor" class="w-10 h-10 inline-block align-text-bottom mr-1">
+                    <svg viewBox="0 0 24 24" fill="currentColor"
+                      class="w-7 h-7 sm:w-10 sm:h-10 inline-block align-text-bottom mr-1">
                       <path d="M4 4h16v12H7l-3 3V4z" />
                     </svg>
-                    <h2 class="text-xl">
+                    <h2 class="text-sm sm:text-xl">
                       México, EUA, Canadá, Pto. Rico<br>
                       <strong>Ilimitados</strong>
                     </h2>
                   </div>
                 </div>
                 <div
-                  class="flex-1 min-w-[100px] bg-[#7fc538] text-white rounded-xl p-4 flex flex-col items-center justify-center">
-                  <span class="font-black text-[45px]">$599<span class="text-xs font-bold">/mes</span></span>
+                  class="w-full sm:flex-1 bg-[#7fc538] text-white rounded-xl p-3 sm:p-4 flex flex-col items-center justify-center">
+                  <span class="font-black text-3xl sm:text-[45px]">$599<span
+                      class="text-xs font-bold">/mes</span></span>
                 </div>
               </div>
               <button
-                class="mt-5 w-2/3 mx-auto block bg-white border-2 border-slate-800 rounded-full py-2.5 font-extrabold text-slate-800 hover:bg-slate-800 hover:text-white transition">
+                class="mt-4 sm:mt-5 w-full sm:w-2/3 mx-auto block bg-white border-2 border-slate-800 rounded-full py-2.5 font-extrabold text-sm sm:text-base text-slate-800 hover:bg-slate-800 hover:text-white transition">
                 Elegir plan
               </button>
             </div>
 
-            <div class="reveal reveal-stagger relative flex gap-2 overflow-x-auto no-scrollbar pb-2 justify-center">
+            <!-- Carrusel de tarjetas -->
+            <div
+              class="reveal reveal-stagger relative flex gap-3 sm:gap-2 overflow-x-auto snap-x snap-mandatory no-scrollbar pb-2 sm:justify-center">
+
               <!-- Pro 11 -->
-              <div class="flex-none min-w-[100px] bg-white p-2 shadow-lg flex flex-col items-center text-center">
-                <span class="bg-sky-400 text-white font-extrabold text-2xl  px-16 py-4 mb-2">
+              <div
+                class="snap-center flex-none w-[68vw] max-w-[220px] sm:w-auto sm:min-w-[100px] bg-white p-2 shadow-lg flex flex-col items-center text-center">
+                <span
+                  class="bg-sky-400 text-white font-extrabold text-lg sm:text-2xl w-full px-2 sm:px-16 py-3 sm:py-4 mb-2">
                   Pro 11
                 </span>
-                <div class="bg-slate-800 text-white py-14 w-full mb-1.5 text-center">
-                  <div class="font-black text-[28px]">22 GB</div>
-                  <div class="text-[18px] font-semibold">para navegar</div>
+                <div class="bg-slate-800 text-white py-8 sm:py-14 w-full mb-1.5 text-center">
+                  <div class="font-black text-xl sm:text-[28px]">22 GB</div>
+                  <div class="text-sm sm:text-[18px] font-semibold">para navegar</div>
                 </div>
                 <div class="text-slate-600 font-bold">
-                  <div class="flex items-center justify-center gap-1.5 my-1.5">
-                    <svg viewBox="0 0 24 24" fill="currentColor" class="w-10 h-10">
+                  <div class="flex items-center justify-center gap-1 sm:gap-1.5 my-1.5">
+                    <svg viewBox="0 0 24 24" fill="currentColor" class="w-7 h-7 sm:w-10 sm:h-10">
                       <path
                         d="M12 2C6.48 2 2 6.13 2 11.2c0 2.28.97 4.36 2.58 5.98L3 22l5.06-1.53A10.7 10.7 0 0 0 12 21.4c5.52 0 10-4.13 10-9.2S17.52 2 12 2z" />
                     </svg>
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="w-10 h-10">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                      class="w-7 h-7 sm:w-10 sm:h-10">
                       <rect x="3" y="3" width="18" height="18" rx="5" />
                       <circle cx="12" cy="12" r="4" />
                       <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
                     </svg>
-                    <svg viewBox="0 0 24 24" fill="currentColor" class="w-10 h-10">
+                    <svg viewBox="0 0 24 24" fill="currentColor" class="w-7 h-7 sm:w-10 sm:h-10">
                       <path
                         d="M22 12a10 10 0 1 0-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.4h-1.2c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.4 2.9h-2.4v7A10 10 0 0 0 22 12z" />
                     </svg>
                   </div>
                 </div>
-                <div class="text-[19px] text-sky-500 font-bold mb-4 text-center">
+                <div class="text-sm sm:text-[19px] text-sky-500 font-bold mb-3 sm:mb-4 text-center">
                   Ilimitados
                 </div>
-                <div class="bg-green-600 text-white py-8 w-full mb-4 text-center">
-                  <div class="text-[19px] font-black">$189</div>
-                  <div class="text-[19px] font-semibold">x3 meses</div>
+                <div class="bg-green-600 text-white py-5 sm:py-8 w-full mb-3 sm:mb-4 text-center">
+                  <div class="text-base sm:text-[19px] font-black">$189</div>
+                  <div class="text-sm sm:text-[19px] font-semibold">x3 meses</div>
                 </div>
                 <button
-                  class="border border-slate-800 rounded-full w-full py-2 mb-2 px-10 text-[19px] font-extrabold text-slate-800 hover:bg-slate-800 hover:text-white transition">
+                  class="border border-slate-800 rounded-full w-full py-2 mb-2 px-2 sm:px-10 text-sm sm:text-[19px] font-extrabold text-slate-800 hover:bg-slate-800 hover:text-white transition">
                   Elegir plan
                 </button>
               </div>
 
               <!-- Pro 13 -->
-              <div class="flex-none min-w-[100px] bg-white p-2 shadow-lg flex flex-col items-center text-center">
-                <span class="bg-sky-400 text-white font-extrabold text-2xl  px-16 py-4 mb-2">
+              <div
+                class="snap-center flex-none w-[68vw] max-w-[220px] sm:w-auto sm:min-w-[100px] bg-white p-2 shadow-lg flex flex-col items-center text-center">
+                <span
+                  class="bg-sky-400 text-white font-extrabold text-lg sm:text-2xl w-full px-2 sm:px-16 py-3 sm:py-4 mb-2">
                   Pro 13
                 </span>
-                <div class="bg-slate-800 text-white py-14 w-full mb-1.5 text-center">
-                  <div class="font-black text-[28px]">26 GB</div>
-                  <div class="text-[18px] font-semibold">para navegar</div>
+                <div class="bg-slate-800 text-white py-8 sm:py-14 w-full mb-1.5 text-center">
+                  <div class="font-black text-xl sm:text-[28px]">26 GB</div>
+                  <div class="text-sm sm:text-[18px] font-semibold">para navegar</div>
                 </div>
                 <div class="text-slate-600 font-bold">
-                  <div class="flex items-center justify-center gap-1.5 my-1.5">
-                    <svg viewBox="0 0 24 24" fill="currentColor" class="w-10 h-10">
+                  <div class="flex items-center justify-center gap-1 sm:gap-1.5 my-1.5">
+                    <svg viewBox="0 0 24 24" fill="currentColor" class="w-7 h-7 sm:w-10 sm:h-10">
                       <path
                         d="M12 2C6.48 2 2 6.13 2 11.2c0 2.28.97 4.36 2.58 5.98L3 22l5.06-1.53A10.7 10.7 0 0 0 12 21.4c5.52 0 10-4.13 10-9.2S17.52 2 12 2z" />
                     </svg>
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="w-10 h-10">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                      class="w-7 h-7 sm:w-10 sm:h-10">
                       <rect x="3" y="3" width="18" height="18" rx="5" />
                       <circle cx="12" cy="12" r="4" />
                       <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
                     </svg>
-                    <svg viewBox="0 0 24 24" fill="currentColor" class="w-10 h-10">
+                    <svg viewBox="0 0 24 24" fill="currentColor" class="w-7 h-7 sm:w-10 sm:h-10">
                       <path
                         d="M22 12a10 10 0 1 0-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.4h-1.2c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.4 2.9h-2.4v7A10 10 0 0 0 22 12z" />
                     </svg>
                   </div>
                 </div>
-                <div class="text-[19px] text-sky-500 font-bold mb-4 text-center">
+                <div class="text-sm sm:text-[19px] text-sky-500 font-bold mb-3 sm:mb-4 text-center">
                   Ilimitados
                 </div>
-                <div class="bg-green-600 text-white py-8 w-full mb-4 text-center">
-                  <div class="text-[19px] font-black">$219</div>
-                  <div class="text-[19px] font-semibold">x3 meses</div>
+                <div class="bg-green-600 text-white py-5 sm:py-8 w-full mb-3 sm:mb-4 text-center">
+                  <div class="text-base sm:text-[19px] font-black">$219</div>
+                  <div class="text-sm sm:text-[19px] font-semibold">x3 meses</div>
                 </div>
                 <button
-                  class="border border-slate-800 rounded-full w-full py-2 mb-2 px-10 text-[19px] font-extrabold text-slate-800 hover:bg-slate-800 hover:text-white transition">
+                  class="border border-slate-800 rounded-full w-full py-2 mb-2 px-2 sm:px-10 text-sm sm:text-[19px] font-extrabold text-slate-800 hover:bg-slate-800 hover:text-white transition">
                   Elegir plan
                 </button>
               </div>
 
               <!-- Pro 16 -->
-              <div class="flex-none min-w-[100px] bg-white p-2 shadow-lg flex flex-col items-center text-center">
-                <span class="bg-sky-400 text-white font-extrabold text-2xl  px-16 py-4 mb-2">
+              <div
+                class="snap-center flex-none w-[68vw] max-w-[220px] sm:w-auto sm:min-w-[100px] bg-white p-2 shadow-lg flex flex-col items-center text-center">
+                <span
+                  class="bg-sky-400 text-white font-extrabold text-lg sm:text-2xl w-full px-2 sm:px-16 py-3 sm:py-4 mb-2">
                   Pro 16
                 </span>
-                <div class="bg-slate-800 text-white py-14 w-full mb-1.5 text-center">
-                  <div class="font-black text-[28px]">32 GB</div>
-                  <div class="text-[18px] font-semibold">para navegar</div>
+                <div class="bg-slate-800 text-white py-8 sm:py-14 w-full mb-1.5 text-center">
+                  <div class="font-black text-xl sm:text-[28px]">32 GB</div>
+                  <div class="text-sm sm:text-[18px] font-semibold">para navegar</div>
                 </div>
                 <div class="text-slate-600 font-bold">
-                  <div class="flex items-center justify-center gap-1.5 my-1.5">
-                    <svg viewBox="0 0 24 24" fill="currentColor" class="w-10 h-10">
+                  <div class="flex items-center justify-center gap-1 sm:gap-1.5 my-1.5">
+                    <svg viewBox="0 0 24 24" fill="currentColor" class="w-7 h-7 sm:w-10 sm:h-10">
                       <path
                         d="M12 2C6.48 2 2 6.13 2 11.2c0 2.28.97 4.36 2.58 5.98L3 22l5.06-1.53A10.7 10.7 0 0 0 12 21.4c5.52 0 10-4.13 10-9.2S17.52 2 12 2z" />
                     </svg>
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="w-10 h-10">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                      class="w-7 h-7 sm:w-10 sm:h-10">
                       <rect x="3" y="3" width="18" height="18" rx="5" />
                       <circle cx="12" cy="12" r="4" />
                       <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
                     </svg>
-                    <svg viewBox="0 0 24 24" fill="currentColor" class="w-10 h-10">
+                    <svg viewBox="0 0 24 24" fill="currentColor" class="w-7 h-7 sm:w-10 sm:h-10">
                       <path
                         d="M22 12a10 10 0 1 0-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.4h-1.2c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.4 2.9h-2.4v7A10 10 0 0 0 22 12z" />
                     </svg>
                   </div>
                 </div>
-                <div class="text-[19px] text-sky-500 font-bold mb-4 text-center">
+                <div class="text-sm sm:text-[19px] text-sky-500 font-bold mb-3 sm:mb-4 text-center">
                   Ilimitados
                 </div>
-                <div class="bg-green-600 text-white py-8 w-full mb-4 text-center">
-                  <div class="text-[19px] font-black">$249</div>
-                  <div class="text-[19px] font-semibold">x3 meses</div>
+                <div class="bg-green-600 text-white py-5 sm:py-8 w-full mb-3 sm:mb-4 text-center">
+                  <div class="text-base sm:text-[19px] font-black">$249</div>
+                  <div class="text-sm sm:text-[19px] font-semibold">x3 meses</div>
                 </div>
                 <button
-                  class="border border-slate-800 rounded-full w-full py-2 mb-2 px-10 text-[19px] font-extrabold text-slate-800 hover:bg-slate-800 hover:text-white transition">
+                  class="border border-slate-800 rounded-full w-full py-2 mb-2 px-2 sm:px-10 text-sm sm:text-[19px] font-extrabold text-slate-800 hover:bg-slate-800 hover:text-white transition">
                   Elegir plan
                 </button>
               </div>
 
               <!-- Pro 20 -->
-              <div class="flex-none min-w-[100px] bg-white p-2 shadow-lg flex flex-col items-center text-center">
-                <span class="bg-sky-400 text-white font-extrabold text-2xl  px-16 py-4 mb-2">
+              <div
+                class="snap-center flex-none w-[68vw] max-w-[220px] sm:w-auto sm:min-w-[100px] bg-white p-2 shadow-lg flex flex-col items-center text-center">
+                <span
+                  class="bg-sky-400 text-white font-extrabold text-lg sm:text-2xl w-full px-2 sm:px-16 py-3 sm:py-4 mb-2">
                   Pro 20
                 </span>
-                <div class="bg-slate-800 text-white py-14 w-full mb-1.5 text-center">
-                  <div class="font-black text-[28px]">40 GB</div>
-                  <div class="text-[18px] font-semibold">para navegar</div>
+                <div class="bg-slate-800 text-white py-8 sm:py-14 w-full mb-1.5 text-center">
+                  <div class="font-black text-xl sm:text-[28px]">40 GB</div>
+                  <div class="text-sm sm:text-[18px] font-semibold">para navegar</div>
                 </div>
                 <div class="text-slate-600 font-bold">
-                  <div class="flex items-center justify-center gap-1.5 my-1.5">
-                    <svg viewBox="0 0 24 24" fill="currentColor" class="w-10 h-10">
+                  <div class="flex items-center justify-center gap-1 sm:gap-1.5 my-1.5">
+                    <svg viewBox="0 0 24 24" fill="currentColor" class="w-7 h-7 sm:w-10 sm:h-10">
                       <path
                         d="M12 2C6.48 2 2 6.13 2 11.2c0 2.28.97 4.36 2.58 5.98L3 22l5.06-1.53A10.7 10.7 0 0 0 12 21.4c5.52 0 10-4.13 10-9.2S17.52 2 12 2z" />
                     </svg>
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="w-10 h-10">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                      class="w-7 h-7 sm:w-10 sm:h-10">
                       <rect x="3" y="3" width="18" height="18" rx="5" />
                       <circle cx="12" cy="12" r="4" />
                       <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
                     </svg>
-                    <svg viewBox="0 0 24 24" fill="currentColor" class="w-10 h-10">
+                    <svg viewBox="0 0 24 24" fill="currentColor" class="w-7 h-7 sm:w-10 sm:h-10">
                       <path
                         d="M22 12a10 10 0 1 0-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.4h-1.2c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.4 2.9h-2.4v7A10 10 0 0 0 22 12z" />
                     </svg>
                   </div>
                 </div>
-                <div class="text-[19px] text-sky-500 font-bold mb-4 text-center">
+                <div class="text-sm sm:text-[19px] text-sky-500 font-bold mb-3 sm:mb-4 text-center">
                   Ilimitados
                 </div>
-                <div class="bg-green-600 text-white py-8 w-full mb-4 text-center">
-                  <div class="text-[19px] font-black">$289</div>
-                  <div class="text-[19px] font-semibold">x3 meses</div>
+                <div class="bg-green-600 text-white py-5 sm:py-8 w-full mb-3 sm:mb-4 text-center">
+                  <div class="text-base sm:text-[19px] font-black">$289</div>
+                  <div class="text-sm sm:text-[19px] font-semibold">x3 meses</div>
                 </div>
                 <button
-                  class="border border-slate-800 rounded-full w-full py-2 mb-2 px-10 text-[19px] font-extrabold text-slate-800 hover:bg-slate-800 hover:text-white transition">
+                  class="border border-slate-800 rounded-full w-full py-2 mb-2 px-2 sm:px-10 text-sm sm:text-[19px] font-extrabold text-slate-800 hover:bg-slate-800 hover:text-white transition">
                   Elegir plan
                 </button>
               </div>
 
               <!-- Pro 30 (destacado) -->
-              <div class="flex-none min-w-[100px] bg-fuchsia-800 p-2 shadow-lg flex flex-col items-center text-center">
-                <span class="bg-sky-400 text-white font-extrabold text-2xl  px-16 py-4 mb-2">
+              <div
+                class="snap-center flex-none w-[68vw] max-w-[220px] sm:w-auto sm:min-w-[100px] bg-fuchsia-800 p-2 shadow-lg flex flex-col items-center text-center">
+                <span
+                  class="bg-sky-400 text-white font-extrabold text-lg sm:text-2xl w-full px-2 sm:px-16 py-3 sm:py-4 mb-2">
                   Pro 30
                 </span>
-                <div class="bg-slate-800 text-white py-14 w-full mb-1.5 text-center">
-                  <div class="font-black text-[28px]">60 GB</div>
-                  <div class="text-[18px] font-semibold">para navegar</div>
+                <div class="bg-slate-800 text-white py-8 sm:py-14 w-full mb-1.5 text-center">
+                  <div class="font-black text-xl sm:text-[28px]">60 GB</div>
+                  <div class="text-sm sm:text-[18px] font-semibold">para navegar</div>
                 </div>
                 <div class="text-slate-600 font-bold">
-                  <div class="flex items-center justify-center gap-1.5 my-1.5 text-white">
-                    <svg viewBox="0 0 24 24" fill="currentColor" class="w-10 h-10">
+                  <div class="flex items-center justify-center gap-1 sm:gap-1.5 my-1.5 text-white">
+                    <svg viewBox="0 0 24 24" fill="currentColor" class="w-7 h-7 sm:w-10 sm:h-10">
                       <path
                         d="M12 2C6.48 2 2 6.13 2 11.2c0 2.28.97 4.36 2.58 5.98L3 22l5.06-1.53A10.7 10.7 0 0 0 12 21.4c5.52 0 10-4.13 10-9.2S17.52 2 12 2z" />
                     </svg>
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="w-10 h-10">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                      class="w-7 h-7 sm:w-10 sm:h-10">
                       <rect x="3" y="3" width="18" height="18" rx="5" />
                       <circle cx="12" cy="12" r="4" />
                       <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
                     </svg>
-                    <svg viewBox="0 0 24 24" fill="currentColor" class="w-10 h-10">
+                    <svg viewBox="0 0 24 24" fill="currentColor" class="w-7 h-7 sm:w-10 sm:h-10">
                       <path
                         d="M22 12a10 10 0 1 0-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.4h-1.2c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.4 2.9h-2.4v7A10 10 0 0 0 22 12z" />
                     </svg>
-                    <svg viewBox="0 0 24 24" fill="currentColor" class="w-10 h-10">
+                    <svg viewBox="0 0 24 24" fill="currentColor" class="w-7 h-7 sm:w-10 sm:h-10">
                       <path
                         d="M21 16v-2l-8-5V3.5a1.5 1.5 0 0 0-3 0V9l-8 5v2l8-2.5V19l-2.5 1.5V22l4-1 4 1v-1.5L13 19v-5.5l8 2.5z" />
                     </svg>
                   </div>
                 </div>
-                <div class="text-[19px] text-white font-bold mb-4 text-center">
+                <div class="text-sm sm:text-[19px] text-white font-bold mb-3 sm:mb-4 text-center">
                   Ilimitados
                 </div>
-                <div class="bg-green-600 text-white py-8 w-full mb-4 text-center">
-                  <div class="text-[19px] font-black">$349</div>
-                  <div class="text-[19px] font-semibold">x3 meses</div>
+                <div class="bg-green-600 text-white py-5 sm:py-8 w-full mb-3 sm:mb-4 text-center">
+                  <div class="text-base sm:text-[19px] font-black">$349</div>
+                  <div class="text-sm sm:text-[19px] font-semibold">x3 meses</div>
                 </div>
                 <button
-                  class="border border-slate-800 rounded-full w-full py-2 mb-2 px-10 text-[19px] font-extrabold text-white hover:bg-slate-800 hover:text-white transition">
+                  class="border border-slate-800 rounded-full w-full py-2 mb-2 px-2 sm:px-10 text-sm sm:text-[19px] font-extrabold text-white hover:bg-slate-800 hover:text-white transition">
                   Elegir plan
                 </button>
               </div>
             </div>
+
+            <!-- Indicador de scroll para móvil (opcional) -->
+            <p class="sm:hidden text-center text-white/80 text-xs -mt-4">← desliza para ver más planes →</p>
           </div>
         </div>
+
         <!-- ===== Portabilidad ===== -->
         <div id="porta" class="tab-content hidden">
-          <div class="max-w-6xl mx-auto py-3 px-2 space-y-10">
-            <div class="reveal reveal-zoom relative bg-white border-white p-4 shadow-2xl">
+          <div class="max-w-6xl mx-auto py-3 px-1 sm:px-2 space-y-6 sm:space-y-10">
+
+            <div class="reveal reveal-zoom relative bg-white border-white p-2 sm:p-4 shadow-2xl">
               <div
-                class="inline-block bg-[#7fc538] min-w-[100%] text-white text-center px-8 py-4 font-black text-2xlshadow">
-                <span class="text-5xl font-bold align-middle ml-1"> Pro Ilimitado 60</span>
+                class="inline-block bg-[#7fc538] min-w-[100%] text-white text-center px-3 sm:px-8 py-3 sm:py-4 font-black shadow">
+                <span class="text-2xl sm:text-4xl md:text-5xl font-bold align-middle ml-1">Pro Ilimitado 60</span>
               </div>
-              <div class="bg-white p-10 flex flex-wrap gap-6 justify-center items-stretch">
+              <div class="bg-white p-4 sm:p-10 flex flex-wrap gap-3 sm:gap-6 justify-center items-stretch">
                 <div
-                  class="flex-1 min-w-[100%] bg-[#7fc538] text-white rounded-xl p-2 flex flex-col items-center justify-center">
-                  <span class="italic font-semibold text-[20px]">ilimitados</span>
-                  <span class="font-black text-[40px] mt-1">PUJ 60 GB</span>
-                  <span class="text-[20px] font-semibold mt-1">para navegar</span>
+                  class="w-full bg-[#7fc538] text-white rounded-xl p-4 sm:p-2 flex flex-col items-center justify-center">
+                  <span class="italic font-semibold text-base sm:text-[20px]">ilimitados</span>
+                  <span class="font-black text-3xl sm:text-[40px] mt-1">PUJ 60 GB</span>
+                  <span class="text-base sm:text-[20px] font-semibold mt-1">para navegar</span>
                 </div>
-                <div class="flex-1 min-w-[100px] flex flex-col gap-2">
+                <div class="w-full sm:flex-1 flex flex-col gap-2">
                   <div
                     class="bg-slate-800 text-white rounded-lg py-2 px-2 text-center font-bold text-sm italic flex items-center justify-center gap-1.5">
-                    <svg viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5 flex-shrink-0">
+                    <svg viewBox="0 0 24 24" fill="currentColor" class="w-4 h-4 sm:w-5 sm:h-5 flex-shrink-0">
                       <path
                         d="M21 16v-2l-8-5V3.5a1.5 1.5 0 0 0-3 0V9l-8 5v2l8-2.5V19l-2.5 1.5V22l4-1 4 1v-1.5L13 19v-5.5l8 2.5z" />
                     </svg>
-                    <h2 class="text-2xl">Pasaporte Movistar</h2>
+                    <h2 class="text-base sm:text-2xl">Pasaporte Movistar</h2>
                   </div>
                   <div
                     class="bg-sky-50 border border-sky-200 rounded-lg py-2 px-2 text-center leading-tight text-slate-700">
-                    <svg viewBox="0 0 24 24" fill="currentColor" class="w-10 h-10 inline-block align-text-bottom mr-1">
+                    <svg viewBox="0 0 24 24" fill="currentColor"
+                      class="w-7 h-7 sm:w-10 sm:h-10 inline-block align-text-bottom mr-1">
                       <path d="M4 4h16v12H7l-3 3V4z" />
                     </svg>
-                    <h2 class="text-xl">
+                    <h2 class="text-sm sm:text-xl">
                       México, EUA, Canadá, Pto. Rico<br>
                       <strong>Ilimitados</strong>
                     </h2>
                   </div>
                 </div>
                 <div
-                  class="flex-1 min-w-[100px] bg-[#7fc538] text-white rounded-xl p-4 flex flex-col items-center justify-center">
-                  <span class="font-black text-[45px]">$300<span class="text-xs font-bold">/mes</span></span>
+                  class="w-full sm:flex-1 bg-[#7fc538] text-white rounded-xl p-3 sm:p-4 flex flex-col items-center justify-center">
+                  <span class="font-black text-3xl sm:text-[45px]">$300<span
+                      class="text-xs font-bold">/mes</span></span>
                 </div>
               </div>
               <button
-                class="mt-5 w-2/3 mx-auto block bg-white border-2 border-slate-800 rounded-full py-2.5 font-extrabold text-slate-800 hover:bg-slate-800 hover:text-white transition">
+                class="mt-4 sm:mt-5 w-full sm:w-2/3 mx-auto block bg-white border-2 border-slate-800 rounded-full py-2.5 font-extrabold text-sm sm:text-base text-slate-800 hover:bg-slate-800 hover:text-white transition">
                 Elegir plan
               </button>
             </div>
 
-            <div class="reveal reveal-stagger relative flex gap-2 overflow-x-auto no-scrollbar pb-2 justify-center">
+            <div
+              class="reveal reveal-stagger relative flex gap-3 sm:gap-2 overflow-x-auto snap-x snap-mandatory no-scrollbar pb-2 sm:justify-center">
+
               <!-- Pro 11 -->
-              <div class="flex-none min-w-[100px] bg-white p-2 shadow-lg flex flex-col items-center text-center">
-                <span class="bg-sky-400 text-white font-extrabold text-2xl  px-16 py-4 mb-2">
+              <div
+                class="snap-center flex-none w-[68vw] max-w-[220px] sm:w-auto sm:min-w-[100px] bg-white p-2 shadow-lg flex flex-col items-center text-center">
+                <span
+                  class="bg-sky-400 text-white font-extrabold text-lg sm:text-2xl w-full px-2 sm:px-16 py-3 sm:py-4 mb-2">
                   Pro 11
                 </span>
-                <div class="bg-slate-800 text-white py-14 w-full mb-1.5 text-center">
-                  <div class="font-black text-[28px]">22 GB</div>
-                  <div class="text-[18px] font-semibold">para navegar</div>
+                <div class="bg-slate-800 text-white py-8 sm:py-14 w-full mb-1.5 text-center">
+                  <div class="font-black text-xl sm:text-[28px]">22 GB</div>
+                  <div class="text-sm sm:text-[18px] font-semibold">para navegar</div>
                 </div>
                 <div class="text-slate-600 font-bold">
-                  <div class="flex items-center justify-center gap-1.5 my-1.5">
-                    <svg viewBox="0 0 24 24" fill="currentColor" class="w-10 h-10">
+                  <div class="flex items-center justify-center gap-1 sm:gap-1.5 my-1.5">
+                    <svg viewBox="0 0 24 24" fill="currentColor" class="w-7 h-7 sm:w-10 sm:h-10">
                       <path
                         d="M12 2C6.48 2 2 6.13 2 11.2c0 2.28.97 4.36 2.58 5.98L3 22l5.06-1.53A10.7 10.7 0 0 0 12 21.4c5.52 0 10-4.13 10-9.2S17.52 2 12 2z" />
                     </svg>
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="w-10 h-10">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                      class="w-7 h-7 sm:w-10 sm:h-10">
                       <rect x="3" y="3" width="18" height="18" rx="5" />
                       <circle cx="12" cy="12" r="4" />
                       <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
                     </svg>
-                    <svg viewBox="0 0 24 24" fill="currentColor" class="w-10 h-10">
+                    <svg viewBox="0 0 24 24" fill="currentColor" class="w-7 h-7 sm:w-10 sm:h-10">
                       <path
                         d="M22 12a10 10 0 1 0-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.4h-1.2c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.4 2.9h-2.4v7A10 10 0 0 0 22 12z" />
                     </svg>
                   </div>
                 </div>
-                <div class="text-[19px] text-sky-500 font-bold mb-4 text-center">
+                <div class="text-sm sm:text-[19px] text-sky-500 font-bold mb-3 sm:mb-4 text-center">
                   Ilimitados
                 </div>
-                <div class="bg-green-600 text-white py-8 w-full mb-4 text-center">
-                  <div class="text-[19px] font-black">$105</div>
-                  <div class="text-[19px] font-semibold">x3 meses</div>
+                <div class="bg-green-600 text-white py-5 sm:py-8 w-full mb-3 sm:mb-4 text-center">
+                  <div class="text-base sm:text-[19px] font-black">$105</div>
+                  <div class="text-sm sm:text-[19px] font-semibold">x3 meses</div>
                 </div>
                 <button
-                  class="border border-slate-800 rounded-full w-full py-2 mb-2 px-10 text-[19px] font-extrabold text-slate-800 hover:bg-slate-800 hover:text-white transition">
+                  class="border border-slate-800 rounded-full w-full py-2 mb-2 px-2 sm:px-10 text-sm sm:text-[19px] font-extrabold text-slate-800 hover:bg-slate-800 hover:text-white transition">
                   Elegir plan
                 </button>
               </div>
 
               <!-- Pro 13 -->
-              <div class="flex-none min-w-[100px] bg-white p-2 shadow-lg flex flex-col items-center text-center">
-                <span class="bg-sky-400 text-white font-extrabold text-2xl  px-16 py-4 mb-2">
+              <div
+                class="snap-center flex-none w-[68vw] max-w-[220px] sm:w-auto sm:min-w-[100px] bg-white p-2 shadow-lg flex flex-col items-center text-center">
+                <span
+                  class="bg-sky-400 text-white font-extrabold text-lg sm:text-2xl w-full px-2 sm:px-16 py-3 sm:py-4 mb-2">
                   Pro 13
                 </span>
-                <div class="bg-slate-800 text-white py-14 w-full mb-1.5 text-center">
-                  <div class="font-black text-[28px]">26 GB</div>
-                  <div class="text-[18px] font-semibold">para navegar</div>
+                <div class="bg-slate-800 text-white py-8 sm:py-14 w-full mb-1.5 text-center">
+                  <div class="font-black text-xl sm:text-[28px]">26 GB</div>
+                  <div class="text-sm sm:text-[18px] font-semibold">para navegar</div>
                 </div>
                 <div class="text-slate-600 font-bold">
-                  <div class="flex items-center justify-center gap-1.5 my-1.5">
-                    <svg viewBox="0 0 24 24" fill="currentColor" class="w-10 h-10">
+                  <div class="flex items-center justify-center gap-1 sm:gap-1.5 my-1.5">
+                    <svg viewBox="0 0 24 24" fill="currentColor" class="w-7 h-7 sm:w-10 sm:h-10">
                       <path
                         d="M12 2C6.48 2 2 6.13 2 11.2c0 2.28.97 4.36 2.58 5.98L3 22l5.06-1.53A10.7 10.7 0 0 0 12 21.4c5.52 0 10-4.13 10-9.2S17.52 2 12 2z" />
                     </svg>
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="w-10 h-10">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                      class="w-7 h-7 sm:w-10 sm:h-10">
                       <rect x="3" y="3" width="18" height="18" rx="5" />
                       <circle cx="12" cy="12" r="4" />
                       <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
                     </svg>
-                    <svg viewBox="0 0 24 24" fill="currentColor" class="w-10 h-10">
+                    <svg viewBox="0 0 24 24" fill="currentColor" class="w-7 h-7 sm:w-10 sm:h-10">
                       <path
                         d="M22 12a10 10 0 1 0-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.4h-1.2c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.4 2.9h-2.4v7A10 10 0 0 0 22 12z" />
                     </svg>
                   </div>
                 </div>
-                <div class="text-[19px] text-sky-500 font-bold mb-4 text-center">
+                <div class="text-sm sm:text-[19px] text-sky-500 font-bold mb-3 sm:mb-4 text-center">
                   Ilimitados
                 </div>
-                <div class="bg-green-600 text-white py-8 w-full mb-4 text-center">
-                  <div class="text-[19px] font-black">$120</div>
-                  <div class="text-[19px] font-semibold">x3 meses</div>
+                <div class="bg-green-600 text-white py-5 sm:py-8 w-full mb-3 sm:mb-4 text-center">
+                  <div class="text-base sm:text-[19px] font-black">$120</div>
+                  <div class="text-sm sm:text-[19px] font-semibold">x3 meses</div>
                 </div>
                 <button
-                  class="border border-slate-800 rounded-full w-full py-2 mb-2 px-10 text-[19px] font-extrabold text-slate-800 hover:bg-slate-800 hover:text-white transition">
+                  class="border border-slate-800 rounded-full w-full py-2 mb-2 px-2 sm:px-10 text-sm sm:text-[19px] font-extrabold text-slate-800 hover:bg-slate-800 hover:text-white transition">
                   Elegir plan
                 </button>
               </div>
 
               <!-- Pro 16 -->
-              <div class="flex-none min-w-[100px] bg-white p-2 shadow-lg flex flex-col items-center text-center">
-                <span class="bg-sky-400 text-white font-extrabold text-2xl  px-16 py-4 mb-2">
+              <div
+                class="snap-center flex-none w-[68vw] max-w-[220px] sm:w-auto sm:min-w-[100px] bg-white p-2 shadow-lg flex flex-col items-center text-center">
+                <span
+                  class="bg-sky-400 text-white font-extrabold text-lg sm:text-2xl w-full px-2 sm:px-16 py-3 sm:py-4 mb-2">
                   Pro 16
                 </span>
-                <div class="bg-slate-800 text-white py-14 w-full mb-1.5 text-center">
-                  <div class="font-black text-[28px]">32 GB</div>
-                  <div class="text-[18px] font-semibold">para navegar</div>
+                <div class="bg-slate-800 text-white py-8 sm:py-14 w-full mb-1.5 text-center">
+                  <div class="font-black text-xl sm:text-[28px]">32 GB</div>
+                  <div class="text-sm sm:text-[18px] font-semibold">para navegar</div>
                 </div>
                 <div class="text-slate-600 font-bold">
-                  <div class="flex items-center justify-center gap-1.5 my-1.5">
-                    <svg viewBox="0 0 24 24" fill="currentColor" class="w-10 h-10">
+                  <div class="flex items-center justify-center gap-1 sm:gap-1.5 my-1.5">
+                    <svg viewBox="0 0 24 24" fill="currentColor" class="w-7 h-7 sm:w-10 sm:h-10">
                       <path
                         d="M12 2C6.48 2 2 6.13 2 11.2c0 2.28.97 4.36 2.58 5.98L3 22l5.06-1.53A10.7 10.7 0 0 0 12 21.4c5.52 0 10-4.13 10-9.2S17.52 2 12 2z" />
                     </svg>
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="w-10 h-10">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                      class="w-7 h-7 sm:w-10 sm:h-10">
                       <rect x="3" y="3" width="18" height="18" rx="5" />
                       <circle cx="12" cy="12" r="4" />
                       <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
                     </svg>
-                    <svg viewBox="0 0 24 24" fill="currentColor" class="w-10 h-10">
+                    <svg viewBox="0 0 24 24" fill="currentColor" class="w-7 h-7 sm:w-10 sm:h-10">
                       <path
                         d="M22 12a10 10 0 1 0-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.4h-1.2c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.4 2.9h-2.4v7A10 10 0 0 0 22 12z" />
                     </svg>
                   </div>
                 </div>
-                <div class="text-[19px] text-sky-500 font-bold mb-4 text-center">
+                <div class="text-sm sm:text-[19px] text-sky-500 font-bold mb-3 sm:mb-4 text-center">
                   Ilimitados
                 </div>
-                <div class="bg-green-600 text-white py-8 w-full mb-4 text-center">
-                  <div class="text-[19px] font-black">$135</div>
-                  <div class="text-[19px] font-semibold">x3 meses</div>
+                <div class="bg-green-600 text-white py-5 sm:py-8 w-full mb-3 sm:mb-4 text-center">
+                  <div class="text-base sm:text-[19px] font-black">$135</div>
+                  <div class="text-sm sm:text-[19px] font-semibold">x3 meses</div>
                 </div>
                 <button
-                  class="border border-slate-800 rounded-full w-full py-2 mb-2 px-10 text-[19px] font-extrabold text-slate-800 hover:bg-slate-800 hover:text-white transition">
+                  class="border border-slate-800 rounded-full w-full py-2 mb-2 px-2 sm:px-10 text-sm sm:text-[19px] font-extrabold text-slate-800 hover:bg-slate-800 hover:text-white transition">
                   Elegir plan
                 </button>
               </div>
 
               <!-- Pro 20 -->
-              <div class="flex-none min-w-[100px] bg-white p-2 shadow-lg flex flex-col items-center text-center">
-                <span class="bg-sky-400 text-white font-extrabold text-2xl  px-16 py-4 mb-2">
+              <div
+                class="snap-center flex-none w-[68vw] max-w-[220px] sm:w-auto sm:min-w-[100px] bg-white p-2 shadow-lg flex flex-col items-center text-center">
+                <span
+                  class="bg-sky-400 text-white font-extrabold text-lg sm:text-2xl w-full px-2 sm:px-16 py-3 sm:py-4 mb-2">
                   Pro 20
                 </span>
-                <div class="bg-slate-800 text-white py-14 w-full mb-1.5 text-center">
-                  <div class="font-black text-[28px]">40 GB</div>
-                  <div class="text-[18px] font-semibold">para navegar</div>
+                <div class="bg-slate-800 text-white py-8 sm:py-14 w-full mb-1.5 text-center">
+                  <div class="font-black text-xl sm:text-[28px]">40 GB</div>
+                  <div class="text-sm sm:text-[18px] font-semibold">para navegar</div>
                 </div>
                 <div class="text-slate-600 font-bold">
-                  <div class="flex items-center justify-center gap-1.5 my-1.5">
-                    <svg viewBox="0 0 24 24" fill="currentColor" class="w-10 h-10">
+                  <div class="flex items-center justify-center gap-1 sm:gap-1.5 my-1.5">
+                    <svg viewBox="0 0 24 24" fill="currentColor" class="w-7 h-7 sm:w-10 sm:h-10">
                       <path
                         d="M12 2C6.48 2 2 6.13 2 11.2c0 2.28.97 4.36 2.58 5.98L3 22l5.06-1.53A10.7 10.7 0 0 0 12 21.4c5.52 0 10-4.13 10-9.2S17.52 2 12 2z" />
                     </svg>
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="w-10 h-10">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                      class="w-7 h-7 sm:w-10 sm:h-10">
                       <rect x="3" y="3" width="18" height="18" rx="5" />
                       <circle cx="12" cy="12" r="4" />
                       <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
                     </svg>
-                    <svg viewBox="0 0 24 24" fill="currentColor" class="w-10 h-10">
+                    <svg viewBox="0 0 24 24" fill="currentColor" class="w-7 h-7 sm:w-10 sm:h-10">
                       <path
                         d="M22 12a10 10 0 1 0-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.4h-1.2c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.4 2.9h-2.4v7A10 10 0 0 0 22 12z" />
                     </svg>
                   </div>
                 </div>
-                <div class="text-[19px] text-sky-500 font-bold mb-4 text-center">
+                <div class="text-sm sm:text-[19px] text-sky-500 font-bold mb-3 sm:mb-4 text-center">
                   Ilimitados
                 </div>
-                <div class="bg-green-600 text-white py-8 w-full mb-4 text-center">
-                  <div class="text-[19px] font-black">$155</div>
-                  <div class="text-[19px] font-semibold">x3 meses</div>
+                <div class="bg-green-600 text-white py-5 sm:py-8 w-full mb-3 sm:mb-4 text-center">
+                  <div class="text-base sm:text-[19px] font-black">$155</div>
+                  <div class="text-sm sm:text-[19px] font-semibold">x3 meses</div>
                 </div>
                 <button
-                  class="border border-slate-800 rounded-full w-full py-2 mb-2 px-10 text-[19px] font-extrabold text-slate-800 hover:bg-slate-800 hover:text-white transition">
+                  class="border border-slate-800 rounded-full w-full py-2 mb-2 px-2 sm:px-10 text-sm sm:text-[19px] font-extrabold text-slate-800 hover:bg-slate-800 hover:text-white transition">
                   Elegir plan
                 </button>
               </div>
 
               <!-- Pro 30 (destacado) -->
-              <div class="flex-none min-w-[100px] bg-fuchsia-800 p-2 shadow-lg flex flex-col items-center text-center">
-                <span class="bg-sky-400 text-white font-extrabold text-2xl  px-16 py-4 mb-2">
+              <div
+                class="snap-center flex-none w-[68vw] max-w-[220px] sm:w-auto sm:min-w-[100px] bg-fuchsia-800 p-2 shadow-lg flex flex-col items-center text-center">
+                <span
+                  class="bg-sky-400 text-white font-extrabold text-lg sm:text-2xl w-full px-2 sm:px-16 py-3 sm:py-4 mb-2">
                   Pro 30
                 </span>
-                <div class="bg-slate-800 text-white py-14 w-full mb-1.5 text-center">
-                  <div class="font-black text-[28px]">60 GB</div>
-                  <div class="text-[18px] font-semibold">para navegar</div>
+                <div class="bg-slate-800 text-white py-8 sm:py-14 w-full mb-1.5 text-center">
+                  <div class="font-black text-xl sm:text-[28px]">60 GB</div>
+                  <div class="text-sm sm:text-[18px] font-semibold">para navegar</div>
                 </div>
                 <div class="text-slate-600 font-bold">
-                  <div class="flex items-center justify-center gap-1.5 my-1.5 text-white">
-                    <svg viewBox="0 0 24 24" fill="currentColor" class="w-10 h-10">
+                  <div class="flex items-center justify-center gap-1 sm:gap-1.5 my-1.5 text-white">
+                    <svg viewBox="0 0 24 24" fill="currentColor" class="w-7 h-7 sm:w-10 sm:h-10">
                       <path
                         d="M12 2C6.48 2 2 6.13 2 11.2c0 2.28.97 4.36 2.58 5.98L3 22l5.06-1.53A10.7 10.7 0 0 0 12 21.4c5.52 0 10-4.13 10-9.2S17.52 2 12 2z" />
                     </svg>
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="w-10 h-10">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                      class="w-7 h-7 sm:w-10 sm:h-10">
                       <rect x="3" y="3" width="18" height="18" rx="5" />
                       <circle cx="12" cy="12" r="4" />
                       <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
                     </svg>
-                    <svg viewBox="0 0 24 24" fill="currentColor" class="w-10 h-10">
+                    <svg viewBox="0 0 24 24" fill="currentColor" class="w-7 h-7 sm:w-10 sm:h-10">
                       <path
                         d="M22 12a10 10 0 1 0-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.4h-1.2c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.4 2.9h-2.4v7A10 10 0 0 0 22 12z" />
                     </svg>
-                    <svg viewBox="0 0 24 24" fill="currentColor" class="w-10 h-10">
+                    <svg viewBox="0 0 24 24" fill="currentColor" class="w-7 h-7 sm:w-10 sm:h-10">
                       <path
                         d="M21 16v-2l-8-5V3.5a1.5 1.5 0 0 0-3 0V9l-8 5v2l8-2.5V19l-2.5 1.5V22l4-1 4 1v-1.5L13 19v-5.5l8 2.5z" />
                     </svg>
                   </div>
                 </div>
-                <div class="text-[19px] text-white font-bold mb-4 text-center">
+                <div class="text-sm sm:text-[19px] text-white font-bold mb-3 sm:mb-4 text-center">
                   Ilimitados
                 </div>
-                <div class="bg-green-600 text-white py-8 w-full mb-4 text-center">
-                  <div class="text-[19px] font-black">$185</div>
-                  <div class="text-[19px] font-semibold">x3 meses</div>
+                <div class="bg-green-600 text-white py-5 sm:py-8 w-full mb-3 sm:mb-4 text-center">
+                  <div class="text-base sm:text-[19px] font-black">$185</div>
+                  <div class="text-sm sm:text-[19px] font-semibold">x3 meses</div>
                 </div>
                 <button
-                  class="border border-slate-800 rounded-full w-full py-2 mb-2 px-10 text-[19px] font-extrabold text-white hover:bg-slate-800 hover:text-white transition">
+                  class="border border-slate-800 rounded-full w-full py-2 mb-2 px-2 sm:px-10 text-sm sm:text-[19px] font-extrabold text-white hover:bg-slate-800 hover:text-white transition">
                   Elegir plan
                 </button>
               </div>
             </div>
+
+            <p class="sm:hidden text-center text-white/80 text-xs -mt-4">← desliza para ver más planes →</p>
           </div>
         </div>
       </div>
@@ -873,37 +926,39 @@
 
   <!-- --Cámbiate a Movistar-- -->
   <section class="relative overflow-hidden bg-cover bg-center bg-fixed">
-    <div class="relative z-10 max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 px-8 py-6 items-center">
+    <div
+      class="relative z-10 max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-10 px-4 sm:px-6 md:px-8 py-6 items-center">
       <div class="reveal reveal-left flex items-center justify-center">
         <img src="image/banner-cambiate.png" alt="Cámbiate a Movistar sin perder tu número" class="w-full rounded-2xl">
       </div>
-      <div class="reveal reveal-right flex flex-col gap-8 rounded-2xl py-28">
-        <p class="text-pink-600 font-extrabold text-4xl text-center leading-snug">
+      <div class="reveal reveal-right flex flex-col gap-5 sm:gap-8 rounded-2xl py-6 sm:py-14 md:py-28">
+        <p
+          class="text-pink-600 font-extrabold text-xl sm:text-2xl md:text-3xl lg:text-4xl text-center leading-snug px-2 sm:px-0">
           Disfruta una mejor experiencia con beneficios pensados para mantenerte siempre conectado.
         </p>
         <div class="grid grid-cols-3 gap-2 sm:gap-4 lg:gap-6 text-center">
           <div class="flex justify-center">
-            <img src="image/cambiate1.png" class="w-36 sm:w-36 lg:w-36 h-auto object-contain" alt="">
+            <img src="image/cambiate1.png" class="w-20 xs:w-24 sm:w-28 md:w-32 lg:w-36 h-auto object-contain" alt="">
           </div>
           <div class="flex justify-center">
-            <img src="image/cambiate2.png" class="w-36 sm:w-36 lg:w-36 h-auto object-contain" alt="">
+            <img src="image/cambiate2.png" class="w-20 xs:w-24 sm:w-28 md:w-32 lg:w-36 h-auto object-contain" alt="">
           </div>
           <div class="flex justify-center">
-            <img src="image/cambiate3.png" class="w-36 sm:w-36 lg:w-36 h-auto object-contain" alt="">
+            <img src="image/cambiate3.png" class="w-20 xs:w-24 sm:w-28 md:w-32 lg:w-36 h-auto object-contain" alt="">
           </div>
         </div>
       </div>
     </div>
     <!-- Olas -->
     <div class="absolute bottom-0 left-0 w-full overflow-hidden leading-none">
-      <svg class="block w-full h-28" viewBox="0 0 1440 170" preserveAspectRatio="none">
+      <svg class="block w-full h-14 sm:h-20 md:h-28" viewBox="0 0 1440 170" preserveAspectRatio="none">
         <path fill="#1298E0"
           d="M0,96L40,106.7C80,117,160,139,240,133.3C320,128,400,96,480,90.7C560,85,640,107,720,122.7C800,139,880,149,960,133.3C1040,117,1120,75,1200,69.3C1280,64,1360,96,1400,112L1440,128L1440,170L0,170Z">
         </path>
       </svg>
     </div>
     <div class="absolute top-0 left-0 w-full overflow-hidden leading-none rotate-180">
-      <svg class="block w-full h-28" viewBox="0 0 1440 170" preserveAspectRatio="none">
+      <svg class="block w-full h-14 sm:h-20 md:h-28" viewBox="0 0 1440 170" preserveAspectRatio="none">
         <path fill="#1298E0"
           d="M0,96L40,106.7C80,117,160,139,240,133.3C320,128,400,96,480,90.7C560,85,640,107,720,122.7C800,139,880,149,960,133.3C1040,117,1120,75,1200,69.3C1280,64,1360,96,1400,112L1440,128L1440,170L0,170Z">
         </path>
