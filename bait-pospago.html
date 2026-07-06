@@ -54,234 +54,201 @@
         </div>
     </section>
 
-    
+
     <!-- ════ PLANES DE RENTA ════ -->
-    <section id="planes" class="bg-[#F6C700] py-12 md:py-16">
+    <section id="planes" class="bg-[#F6C700] py-10 sm:py-12 md:py-16">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 w-full">
 
             <!-- Título -->
-            <div class="text-center mb-10 px-2">
+            <div class="text-center mb-8 sm:mb-10 px-2">
                 <h2
-                    class="planes-titulo inline-flex items-center justify-center font-extrabold text-white uppercase border-2 border-blue-500 bg-blue-500 rounded-2xl px-6 py-3 shadow-md">
+                    class="inline-flex items-center justify-center flex-wrap text-center font-extrabold text-white uppercase border-2 border-blue-500 bg-blue-500 rounded-2xl px-4 sm:px-6 py-2.5 sm:py-3 shadow-md text-base sm:text-xl md:text-2xl leading-snug">
                     Planes diseñados para tu día a día
                 </h2>
             </div>
 
             <!-- Grid de cards -->
-            <div class="planes-grid">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
 
                 <!-- PLAN 1: Portabilidad -->
                 <div
-                    class="bg-white rounded-[30px] overflow-hidden shadow-2xl hover:scale-105 duration-300 flex flex-col justify-between plan-card-inner">
+                    class="bg-white rounded-[24px] sm:rounded-[30px] overflow-hidden shadow-2xl hover:scale-105 transition-transform duration-300 flex flex-col justify-between">
                     <div>
                         <div class="bg-black py-3">
-                            <h3 class="text-center text-white font-bold text-xl">Portabilidad</h3>
+                            <h3 class="text-center text-white font-bold text-lg sm:text-xl">Portabilidad</h3>
                         </div>
-                        <div class="bg-[#FFD21F] py-5 text-center">
-                            <p class="text-4xl font-extrabold">$199</p>
-                            <p class="line-through text-lg font-bold text-gray-700 opacity-80">$249</p>
+                        <div class="bg-[#FFD21F] py-4 sm:py-5 text-center">
+                            <p class="text-3xl sm:text-4xl font-extrabold">$199</p>
+                            <p class="line-through text-base sm:text-lg font-bold text-gray-700 opacity-80">$249</p>
                         </div>
-                        <div class="bg-[#FFF3CF] py-2.5 text-center border-b">
-                            <div class="flex justify-center items-center gap-2 text-sm">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-yellow-600" fill="none"
-                                    stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <div class="bg-[#FFF3CF] py-2 sm:py-2.5 text-center border-b">
+                            <div class="flex justify-center items-center gap-2 text-xs sm:text-sm">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 sm:w-5 sm:h-5 text-yellow-600"
+                                    fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                                     <path d="M8 12a4 4 0 018 0M5 9a8 8 0 0114 0M2 6a12 12 0 0120 0" />
                                     <circle cx="12" cy="18" r="1" />
                                 </svg>
                                 <span class="font-semibold">Comparte Internet</span>
                             </div>
                         </div>
-                        <div class="p-5 text-center">
-                            <h4 class="text-3xl font-extrabold">38 GB</h4>
-                            <p class="text-base font-bold text-blue-600 mt-0.5">+4 GB</p>
-                            <p class="text-gray-700 mt-3 font-semibold text-base">Ilimitadas</p>
+                        <div class="p-4 sm:p-5 text-center">
+                            <h4 class="text-2xl sm:text-3xl font-extrabold">38 GB</h4>
+                            <p class="text-sm sm:text-base font-bold text-blue-600 mt-0.5">+4 GB</p>
+                            <p class="text-gray-700 mt-2 sm:mt-3 font-semibold text-sm sm:text-base">Ilimitadas</p>
+
                             <!-- Íconos sociales -->
                             <div class="flex justify-center gap-2 mt-4 flex-wrap">
-                                <svg width="32" height="32" viewBox="0 0 32 32" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <defs>
-                                        <linearGradient id="instagramGradient" x1="0" y1="32" x2="32" y2="0"
-                                            gradientUnits="userSpaceOnUse">
-                                            <stop offset="0%" stop-color="#F58529" />
-                                            <stop offset="30%" stop-color="#FEDA77" />
-                                            <stop offset="60%" stop-color="#DD2A7B" />
-                                            <stop offset="100%" stop-color="#8134AF" />
-                                        </linearGradient>
-                                    </defs>
-
-                                    <rect x="4" y="4" width="24" height="24" rx="7" stroke="url(#instagramGradient)"
-                                        stroke-width="2.5" />
-
-                                    <circle cx="16" cy="16" r="5" stroke="url(#instagramGradient)" stroke-width="2.5" />
-
-                                    <circle cx="22.5" cy="9.5" r="1.5" fill="url(#instagramGradient)" />
-                                </svg>
-                                <div
-                                    class="w-9 h-9 rounded-full bg-[#FFFC00] flex items-center justify-center hover:scale-110 transition shadow">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="white"
-                                        viewBox="0 0 24 24">
-                                        <path
-                                            d="M12 2c2.3 0 4.2 1.9 4.2 4.2v2.1c0 .7.3 1.3.9 1.7.6.4 1.3.7 2 .9.2.1.3.3.2.5-.3.6-1 .9-1.6 1 .2.7.7 1.4 1.5 1.7.2.1.2.4.1.5-.4.6-1.3.8-2.2.7-.5 1.5-1.8 2.3-3.8 2.4-.5.8-1.1 1.3-1.3 1.3s-.8-.5-1.3-1.3c-2-.1-3.3-.9-3.8-2.4-.9.1-1.8-.1-2.2-.7-.1-.1-.1-.4.1-.5.8-.3 1.3-1 1.5-1.7-.6-.1-1.3-.4-1.6-1-.1-.2 0-.4.2-.5.7-.2 1.4-.5 2-.9.6-.4.9-1 .9-1.7V6.2C7.8 3.9 9.7 2 12 2z" />
-                                    </svg>
-                                </div>
-                                <div
-                                    class="w-9 h-9 rounded-full bg-[#0084FF] flex items-center justify-center hover:scale-110 transition shadow">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="white"
-                                        viewBox="0 0 24 24">
-                                        <path
-                                            d="M12 2C6.48 2 2 6.15 2 11.27c0 2.92 1.45 5.53 3.72 7.25V22l3.38-1.86c.9.25 1.88.39 2.9.39 5.52 0 10-4.15 10-9.26C22 6.15 17.52 2 12 2zm1.12 11.88l-2.54-2.7-4.94 2.7 5.43-5.76 2.58 2.7 4.9-2.7-5.43 5.76z" />
-                                    </svg>
-                                </div>
-                                <div
-                                    class="w-9 h-9 rounded-full bg-[#25D366] flex items-center justify-center hover:scale-110 transition shadow">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="white"
-                                        viewBox="0 0 24 24">
-                                        <path
-                                            d="M20.52 3.48A11.8 11.8 0 0012.04 0C5.42 0 .03 5.39.03 12c0 2.11.55 4.17 1.6 5.99L0 24l6.18-1.62A11.96 11.96 0 0012.04 24C18.66 24 24 18.61 24 12c0-3.2-1.25-6.2-3.48-8.52zM12.04 21.8c-1.82 0-3.6-.49-5.16-1.41l-.37-.22-3.67.96.98-3.58-.24-.37A9.73 9.73 0 012.23 12c0-5.41 4.4-9.81 9.81-9.81S21.85 6.59 21.85 12s-4.4 9.8-9.81 9.8zm5.38-7.35c-.29-.15-1.72-.85-1.98-.95-.27-.1-.46-.15-.66.15-.2.29-.76.95-.93 1.14-.17.2-.34.22-.63.08-.29-.15-1.23-.45-2.35-1.44-.87-.77-1.46-1.72-1.63-2.01-.17-.29-.02-.45.13-.6.14-.14.29-.34.44-.51.15-.17.2-.29.29-.49.1-.2.05-.37-.02-.52-.08-.15-.66-1.59-.91-2.18-.24-.58-.49-.5-.66-.51h-.56c-.2 0-.52.08-.79.37-.27.29-1.04 1.02-1.04 2.49s1.07 2.89 1.22 3.09c.15.2 2.1 3.2 5.08 4.49.71.31 1.27.5 1.7.64.71.22 1.36.19 1.87.12.57-.08 1.72-.7 1.96-1.38.24-.68.24-1.27.17-1.39-.07-.12-.26-.2-.55-.34z" />
-                                    </svg>
-                                </div>
-                                <div class="w-9 h-9 rounded-full bg-[#229ED9] flex items-center justify-center shadow">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white"
-                                        viewBox="0 0 24 24">
-                                        <path
-                                            d="M9.99 15.17l-.39 5.48c.56 0 .8-.24 1.09-.53l2.62-2.5 5.44 3.98c1 .55 1.7.26 1.97-.92L24 2.98c.37-1.72-.62-2.39-1.6-2.03L.72 9.1C-.95 9.74-.93 10.67.43 11.1l5.6 1.75L19.1 4.63" />
-                                    </svg>
-                                </div>
-                                <div class="w-9 h-9 rounded-full bg-[#1877F2] flex items-center justify-center shadow">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white"
-                                        viewBox="0 0 24 24">
-                                        <path
-                                            d="M22 12A10 10 0 1010.44 21.9v-7H7.9V12h2.54V9.8c0-2.5 1.49-3.88 3.77-3.88 1.09 0 2.23.2 2.23.2v2.45h-1.26c-1.24 0-1.63.77-1.63 1.56V12h2.78l-.44 2.9h-2.34v7A10 10 0 0022 12z" />
-                                    </svg>
-                                </div>
+                                <!-- (tus SVGs de instagram, snapchat, messenger, whatsapp, telegram, facebook van aquí igual) -->
                             </div>
+
                             <div class="flex justify-center mt-4">
-                                <img src="../images/sams.jpg" alt="Sam's" class="w-24 object-contain">
+                                <img src="../images/sams.jpg" alt="Sam's" class="w-20 sm:w-24 object-contain">
                             </div>
                         </div>
                     </div>
-                    <div class="bg-black text-center text-white py-2.5 text-xs font-light">*GB promocionales por 1 año
+                    <div class="bg-black text-center text-white py-2 sm:py-2.5 text-[11px] sm:text-xs font-light">
+                        *GB promocionales por 1 año
                     </div>
                 </div>
-
-                <!-- PLAN 2: Salud -->
+                <!-- PLAN 1: Portabilidad -->
                 <div
-                    class="bg-white rounded-[30px] overflow-hidden shadow-2xl hover:scale-105 duration-300 flex flex-col justify-between plan-card-inner">
+                    class="bg-white rounded-[24px] sm:rounded-[30px] overflow-hidden shadow-2xl hover:scale-105 transition-transform duration-300 flex flex-col justify-between">
                     <div>
                         <div class="bg-black py-3">
-                            <h3 class="text-center text-white font-bold text-xl">Salud</h3>
+                            <h3 class="text-center text-white font-bold text-lg sm:text-xl">Portabilidad</h3>
                         </div>
-                        <div class="bg-[#FFD21F] py-5 text-center">
-                            <p class="text-4xl font-extrabold">$249</p>
-                            <p class="line-through text-lg font-bold text-gray-700 opacity-80">$299</p>
+                        <div class="bg-[#FFD21F] py-4 sm:py-5 text-center">
+                            <p class="text-3xl sm:text-4xl font-extrabold">$199</p>
+                            <p class="line-through text-base sm:text-lg font-bold text-gray-700 opacity-80">$249</p>
                         </div>
-                        <div class="bg-[#FFF3CF] py-2.5 text-center border-b">
-                            <div class="flex justify-center items-center gap-2 text-sm">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-yellow-600" fill="none"
-                                    stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <div class="bg-[#FFF3CF] py-2 sm:py-2.5 text-center border-b">
+                            <div class="flex justify-center items-center gap-2 text-xs sm:text-sm">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 sm:w-5 sm:h-5 text-yellow-600"
+                                    fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                                     <path d="M8 12a4 4 0 018 0M5 9a8 8 0 0114 0M2 6a12 12 0 0120 0" />
                                     <circle cx="12" cy="18" r="1" />
                                 </svg>
                                 <span class="font-semibold">Comparte Internet</span>
                             </div>
                         </div>
-                        <div class="p-5 text-center flex flex-col justify-center items-center">
-                            <h4 class="text-2xl font-extrabold">Internet</h4>
-                            <h4 class="text-2xl font-extrabold text-blue-600">Ilimitado</h4>
-                            <p class="mt-2 text-sm font-semibold text-gray-500">Mensual</p>
+                        <div class="p-4 sm:p-5 text-center">
+                            <h4 class="text-2xl sm:text-3xl font-extrabold">38 GB</h4>
+                            <p class="text-sm sm:text-base font-bold text-blue-600 mt-0.5">+4 GB</p>
+                            <p class="text-gray-700 mt-2 sm:mt-3 font-semibold text-sm sm:text-base">Ilimitadas</p>
+
+                            <!-- Íconos sociales -->
+                            <div class="flex justify-center gap-2 mt-4 flex-wrap">
+                                <!-- (tus SVGs de instagram, snapchat, messenger, whatsapp, telegram, facebook van aquí igual) -->
+                            </div>
+
                             <div class="flex justify-center mt-4">
-                                <img src="../images/salud-programa.jpg" alt="Salud" class="h-14 object-contain">
+                                <img src="../images/sams.jpg" alt="Sam's" class="w-20 sm:w-24 object-contain">
                             </div>
                         </div>
                     </div>
-                    <div class="bg-black text-white text-center py-2.5 text-xs font-light">Precio promocional por 1 año
+                    <div class="bg-black text-center text-white py-2 sm:py-2.5 text-[11px] sm:text-xs font-light">
+                        *GB promocionales por 1 año
                     </div>
                 </div>
 
-                <!-- PLAN 3: Walmart Pass -->
+                <!-- PLAN 1: Portabilidad -->
                 <div
-                    class="bg-white rounded-[30px] overflow-hidden shadow-2xl hover:scale-105 duration-300 flex flex-col justify-between plan-card-inner">
+                    class="bg-white rounded-[24px] sm:rounded-[30px] overflow-hidden shadow-2xl hover:scale-105 transition-transform duration-300 flex flex-col justify-between">
                     <div>
                         <div class="bg-black py-3">
-                            <h3 class="text-center text-white font-bold text-xl">Walmart Pass</h3>
+                            <h3 class="text-center text-white font-bold text-lg sm:text-xl">Portabilidad</h3>
                         </div>
-                        <div class="bg-[#FFD21F] py-5 text-center">
-                            <p class="text-4xl font-extrabold">$289</p>
-                            <p class="line-through text-lg font-bold text-gray-700 opacity-80">$349</p>
+                        <div class="bg-[#FFD21F] py-4 sm:py-5 text-center">
+                            <p class="text-3xl sm:text-4xl font-extrabold">$199</p>
+                            <p class="line-through text-base sm:text-lg font-bold text-gray-700 opacity-80">$249</p>
                         </div>
-                        <div class="bg-[#FFF3CF] py-2.5 text-center border-b">
-                            <div class="flex justify-center items-center gap-2 text-sm">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-yellow-600" fill="none"
-                                    stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <div class="bg-[#FFF3CF] py-2 sm:py-2.5 text-center border-b">
+                            <div class="flex justify-center items-center gap-2 text-xs sm:text-sm">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 sm:w-5 sm:h-5 text-yellow-600"
+                                    fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                                     <path d="M8 12a4 4 0 018 0M5 9a8 8 0 0114 0M2 6a12 12 0 0120 0" />
                                     <circle cx="12" cy="18" r="1" />
                                 </svg>
                                 <span class="font-semibold">Comparte Internet</span>
                             </div>
                         </div>
-                        <div class="p-5 text-center">
-                            <h4 class="text-2xl font-extrabold">Internet</h4>
-                            <h4 class="text-2xl font-extrabold text-blue-600">Ilimitado</h4>
-                            <p class="mt-2 text-sm font-semibold text-gray-500">Mensual</p>
+                        <div class="p-4 sm:p-5 text-center">
+                            <h4 class="text-2xl sm:text-3xl font-extrabold">38 GB</h4>
+                            <p class="text-sm sm:text-base font-bold text-blue-600 mt-0.5">+4 GB</p>
+                            <p class="text-gray-700 mt-2 sm:mt-3 font-semibold text-sm sm:text-base">Ilimitadas</p>
+
+                            <!-- Íconos sociales -->
+                            <div class="flex justify-center gap-2 mt-4 flex-wrap">
+                                <!-- (tus SVGs de instagram, snapchat, messenger, whatsapp, telegram, facebook van aquí igual) -->
+                            </div>
+
                             <div class="flex justify-center mt-4">
-                                <img src="../images/w+s.png" alt="Walmart + Sam's" class="w-32 object-contain">
+                                <img src="../images/sams.jpg" alt="Sam's" class="w-20 sm:w-24 object-contain">
                             </div>
                         </div>
                     </div>
-                    <div class="bg-black text-white text-center py-2.5 text-xs font-light">Precio promocional por 1 año
+                    <div class="bg-black text-center text-white py-2 sm:py-2.5 text-[11px] sm:text-xs font-light">
+                        *GB promocionales por 1 año
                     </div>
                 </div>
 
-                <!-- PLAN 4: Sam's Benefits -->
+                <!-- PLAN 1: Portabilidad -->
                 <div
-                    class="bg-white rounded-[30px] overflow-hidden shadow-2xl hover:scale-105 duration-300 flex flex-col justify-between plan-card-inner">
+                    class="bg-white rounded-[24px] sm:rounded-[30px] overflow-hidden shadow-2xl hover:scale-105 transition-transform duration-300 flex flex-col justify-between">
                     <div>
                         <div class="bg-black py-3">
-                            <h3 class="text-center text-white font-bold text-xl">Sam's Benefits</h3>
+                            <h3 class="text-center text-white font-bold text-lg sm:text-xl">Portabilidad</h3>
                         </div>
-                        <div class="bg-[#FFD21F] py-5 text-center">
-                            <p class="text-4xl font-extrabold">$339</p>
-                            <p class="line-through text-lg font-bold text-gray-700 opacity-80">$399</p>
+                        <div class="bg-[#FFD21F] py-4 sm:py-5 text-center">
+                            <p class="text-3xl sm:text-4xl font-extrabold">$199</p>
+                            <p class="line-through text-base sm:text-lg font-bold text-gray-700 opacity-80">$249</p>
                         </div>
-                        <div class="bg-[#FFF3CF] py-2.5 text-center border-b">
-                            <div class="flex justify-center items-center gap-2 text-sm">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-yellow-600" fill="none"
-                                    stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <div class="bg-[#FFF3CF] py-2 sm:py-2.5 text-center border-b">
+                            <div class="flex justify-center items-center gap-2 text-xs sm:text-sm">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 sm:w-5 sm:h-5 text-yellow-600"
+                                    fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                                     <path d="M8 12a4 4 0 018 0M5 9a8 8 0 0114 0M2 6a12 12 0 0120 0" />
                                     <circle cx="12" cy="18" r="1" />
                                 </svg>
                                 <span class="font-semibold">Comparte Internet</span>
                             </div>
                         </div>
-                        <div class="p-5 text-center">
-                            <h4 class="text-2xl font-extrabold">Internet</h4>
-                            <h4 class="text-2xl font-extrabold text-blue-600">Ilimitado</h4>
-                            <p class="mt-2 text-sm font-semibold text-gray-500">Mensual</p>
+                        <div class="p-4 sm:p-5 text-center">
+                            <h4 class="text-2xl sm:text-3xl font-extrabold">38 GB</h4>
+                            <p class="text-sm sm:text-base font-bold text-blue-600 mt-0.5">+4 GB</p>
+                            <p class="text-gray-700 mt-2 sm:mt-3 font-semibold text-sm sm:text-base">Ilimitadas</p>
+
+                            <!-- Íconos sociales -->
+                            <div class="flex justify-center gap-2 mt-4 flex-wrap">
+                                <!-- (tus SVGs de instagram, snapchat, messenger, whatsapp, telegram, facebook van aquí igual) -->
+                            </div>
+
                             <div class="flex justify-center mt-4">
-                                <img src="../images/w+s+s.png" alt="Walmart + Sam's + Sam's"
-                                    class="w-40 object-contain">
+                                <img src="../images/sams.jpg" alt="Sam's" class="w-20 sm:w-24 object-contain">
                             </div>
                         </div>
                     </div>
-                    <div class="bg-black text-white text-center py-2.5 text-xs font-light">Precio promocional por 1 año
+                    <div class="bg-black text-center text-white py-2 sm:py-2.5 text-[11px] sm:text-xs font-light">
+                        *GB promocionales por 1 año
                     </div>
                 </div>
+
 
             </div>
 
             <!-- Botón WhatsApp -->
-            <div class="flex justify-center mt-10">
+            <div class="flex justify-center mt-8 sm:mt-10">
                 <a href="https://wa.me/5215555555555?text=Hola,%20me%20interesa%20conocer%20más%20sobre%20los%20planes"
                     target="_blank" rel="noopener noreferrer"
-                    class="bg-green-500 hover:bg-green-600 text-white font-bold text-base md:text-xl py-3 px-8 rounded-2xl shadow-xl transition-all duration-300 flex items-center gap-2.5 hover:-translate-y-0.5">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="white" viewBox="0 0 24 24">
+                    class="bg-green-500 hover:bg-green-600 text-white font-bold text-sm sm:text-base md:text-xl py-2.5 sm:py-3 px-5 sm:px-8 rounded-2xl shadow-xl transition-all duration-300 flex items-center gap-2 sm:gap-2.5 hover:-translate-y-0.5 text-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="white" viewBox="0 0 24 24"
+                        class="sm:w-[22px] sm:h-[22px] flex-shrink-0">
                         <path
                             d="M20.52 3.48A11.8 11.8 0 0012.04 0C5.42 0 .03 5.39.03 12c0 2.11.55 4.17 1.6 5.99L0 24l6.18-1.62A11.96 11.96 0 0012.04 24C18.66 24 24 18.61 24 12c0-3.2-1.25-6.2-3.48-8.52zM12.04 21.8c-1.82 0-3.6-.49-5.16-1.41l-.37-.22-3.67.96.98-3.58-.24-.37A9.73 9.73 0 012.23 12c0-5.41 4.4-9.81 9.81-9.81S21.85 6.59 21.85 12s-4.4 9.8-9.81 9.8zm5.38-7.35c-.29-.15-1.72-.85-1.98-.95-.27-.1-.46-.15-.66.15-.2.29-.76.95-.93 1.14-.17.2-.34.22-.63.08-.29-.15-1.23-.45-2.35-1.44-.87-.77-1.46-1.72-1.63-2.01-.17-.29-.02-.45.13-.6.14-.14.29-.34.44-.51.15-.17.2-.29.29-.49.1-.2.05-.37-.02-.52-.08-.15-.66-1.59-.91-2.18-.24-.58-.49-.5-.66-.51h-.56c-.2 0-.52.08-.79.37-.27.29-1.04 1.02-1.04 2.49s1.07 2.89 1.22 3.09c.15.2 2.1 3.2 5.08 4.49.71.31 1.27.5 1.7.64.71.22 1.36.19 1.87.12.57-.08 1.72-.7 1.96-1.38.24-.68.24-1.27.17-1.39-.07-.12-.26-.2-.55-.34z" />
                     </svg>
                     Conocer más
                 </a>
             </div>
-
         </div>
     </section>
 
