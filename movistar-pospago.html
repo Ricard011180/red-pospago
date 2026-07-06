@@ -209,7 +209,7 @@
   </section>
 
   <!--- Servicios --->
-  <section class="px-3 sm:px-6 lg:px-8 py-5 sm:py-8">
+  <section class="px-1 sm:px-1 lg:px-1 py-1 sm:py-1">
     <div class="mx-auto max-w-7xl">
       <div class="flex items-center justify-between reveal">
         <div class="flex-1 flex justify-start">
@@ -229,7 +229,7 @@
         </div>
       </div>
       <div
-        class="reveal reveal-stagger grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 w-full sm:w-[90%] mx-auto gap-4 sm:gap-8 mt-5 sm:mt-8">
+        class="reveal reveal-stagger grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 w-full sm:w-[70%] mx-auto gap-4 sm:gap-8 mt-1 sm:mt-1">
         <img src="image/planes_renta.png" alt="Planes de renta"
           class="w-full h-auto object-contain rounded-lg shadow-sm sm:shadow-none">
         <img src="image/esim.png" alt="Portabilidad"
@@ -242,6 +242,7 @@
 
 
   <!-- --Planes de renta-- -->
+
   <section class="relative overflow-hidden bg-cover bg-center py-1 bg-fixed"
     style="background-image:url('image/fondo-nubes.jpg')">
     <!-- Olas -->
@@ -274,12 +275,12 @@
       <div class="overflow-hidden">
         <div class="flex">
           <button
-            class="tab-btn flex-1 py-3 sm:py-5 text-2xl sm:text-lg font-semibold border-b-4 border-write hover:text-black text-white transition"
+            class="tab-btn flex-1 py-3 sm:py-5 text-2xl sm:text-lg font-semibold border-b-4 border-write hover:text-[#7fc538] text-white transition"
             data-tab="linea">
             Línea Nueva
           </button>
           <button
-            class="tab-btn flex-1 py-3 sm:py-5 text-2xl sm:text-lg font-semibold border-b-4 border-transparent text-white hover:text-black transition"
+            class="tab-btn flex-1 py-3 sm:py-5 text-2xl sm:text-lg font-semibold border-b-4 border-transparent text-white hover:text-[#7fc538] transition"
             data-tab="porta">
             Portabilidad
           </button>
@@ -331,7 +332,7 @@
                       class="text-xs font-bold">/mes</span></span>
                 </div>
               </div>
-              <button
+              <button onclick="solicitarPlan('Pro Ilimitado 60', 'línea nueva')"
                 class="mt-4 sm:mt-5 w-full sm:w-2/3 mx-auto block bg-white border-2 border-slate-800 rounded-full py-2.5 font-extrabold text-sm sm:text-base text-slate-800 hover:bg-slate-800 hover:text-white transition">
                 Elegir plan
               </button>
@@ -377,7 +378,7 @@
                   <div class="text-base sm:text-[19px] font-black">$189</div>
                   <div class="text-sm sm:text-[19px] font-semibold">x3 meses</div>
                 </div>
-                <button
+                <button onclick="solicitarPlan('Pro 11', 'línea nueva')"
                   class="border border-slate-800 rounded-full w-full py-2 mb-2 px-2 sm:px-10 text-sm sm:text-[19px] font-extrabold text-slate-800 hover:bg-slate-800 hover:text-white transition">
                   Elegir plan
                 </button>
@@ -419,7 +420,7 @@
                   <div class="text-base sm:text-[19px] font-black">$219</div>
                   <div class="text-sm sm:text-[19px] font-semibold">x3 meses</div>
                 </div>
-                <button
+                <button onclick="solicitarPlan('Pro 13', 'línea nueva')"
                   class="border border-slate-800 rounded-full w-full py-2 mb-2 px-2 sm:px-10 text-sm sm:text-[19px] font-extrabold text-slate-800 hover:bg-slate-800 hover:text-white transition">
                   Elegir plan
                 </button>
@@ -461,7 +462,7 @@
                   <div class="text-base sm:text-[19px] font-black">$249</div>
                   <div class="text-sm sm:text-[19px] font-semibold">x3 meses</div>
                 </div>
-                <button
+                <button onclick="solicitarPlan('Pro 16', 'línea nueva')"
                   class="border border-slate-800 rounded-full w-full py-2 mb-2 px-2 sm:px-10 text-sm sm:text-[19px] font-extrabold text-slate-800 hover:bg-slate-800 hover:text-white transition">
                   Elegir plan
                 </button>
@@ -503,7 +504,7 @@
                   <div class="text-base sm:text-[19px] font-black">$289</div>
                   <div class="text-sm sm:text-[19px] font-semibold">x3 meses</div>
                 </div>
-                <button
+                <button onclick="solicitarPlan('Pro 20', 'línea nueva')"
                   class="border border-slate-800 rounded-full w-full py-2 mb-2 px-2 sm:px-10 text-sm sm:text-[19px] font-extrabold text-slate-800 hover:bg-slate-800 hover:text-white transition">
                   Elegir plan
                 </button>
@@ -549,7 +550,7 @@
                   <div class="text-base sm:text-[19px] font-black">$349</div>
                   <div class="text-sm sm:text-[19px] font-semibold">x3 meses</div>
                 </div>
-                <button
+                <button onclick="solicitarPlan('Pro 30', 'línea nueva')"
                   class="border border-slate-800 rounded-full w-full py-2 mb-2 px-2 sm:px-10 text-sm sm:text-[19px] font-extrabold text-white hover:bg-slate-800 hover:text-white transition">
                   Elegir plan
                 </button>
@@ -604,7 +605,7 @@
                       class="text-xs font-bold">/mes</span></span>
                 </div>
               </div>
-              <button
+              <button onclick="solicitarPlan('Pro Ilimitado 60', 'portabilidad')"
                 class="mt-4 sm:mt-5 w-full sm:w-2/3 mx-auto block bg-white border-2 border-slate-800 rounded-full py-2.5 font-extrabold text-sm sm:text-base text-slate-800 hover:bg-slate-800 hover:text-white transition">
                 Elegir plan
               </button>
@@ -649,7 +650,7 @@
                   <div class="text-base sm:text-[19px] font-black">$105</div>
                   <div class="text-sm sm:text-[19px] font-semibold">x3 meses</div>
                 </div>
-                <button
+                <button onclick="solicitarPlan('Pro 11', 'portabilidad')"
                   class="border border-slate-800 rounded-full w-full py-2 mb-2 px-2 sm:px-10 text-sm sm:text-[19px] font-extrabold text-slate-800 hover:bg-slate-800 hover:text-white transition">
                   Elegir plan
                 </button>
@@ -691,7 +692,7 @@
                   <div class="text-base sm:text-[19px] font-black">$120</div>
                   <div class="text-sm sm:text-[19px] font-semibold">x3 meses</div>
                 </div>
-                <button
+                <button onclick="solicitarPlan('Pro 13', 'portabilidad')"
                   class="border border-slate-800 rounded-full w-full py-2 mb-2 px-2 sm:px-10 text-sm sm:text-[19px] font-extrabold text-slate-800 hover:bg-slate-800 hover:text-white transition">
                   Elegir plan
                 </button>
@@ -733,7 +734,7 @@
                   <div class="text-base sm:text-[19px] font-black">$135</div>
                   <div class="text-sm sm:text-[19px] font-semibold">x3 meses</div>
                 </div>
-                <button
+                <button onclick="solicitarPlan('Pro 16', 'portabilidad')"
                   class="border border-slate-800 rounded-full w-full py-2 mb-2 px-2 sm:px-10 text-sm sm:text-[19px] font-extrabold text-slate-800 hover:bg-slate-800 hover:text-white transition">
                   Elegir plan
                 </button>
@@ -775,7 +776,7 @@
                   <div class="text-base sm:text-[19px] font-black">$155</div>
                   <div class="text-sm sm:text-[19px] font-semibold">x3 meses</div>
                 </div>
-                <button
+                <button onclick="solicitarPlan('Pro 20', 'portabilidad')"
                   class="border border-slate-800 rounded-full w-full py-2 mb-2 px-2 sm:px-10 text-sm sm:text-[19px] font-extrabold text-slate-800 hover:bg-slate-800 hover:text-white transition">
                   Elegir plan
                 </button>
@@ -821,7 +822,7 @@
                   <div class="text-base sm:text-[19px] font-black">$185</div>
                   <div class="text-sm sm:text-[19px] font-semibold">x3 meses</div>
                 </div>
-                <button
+                <button onclick="solicitarPlan('Pro 30', 'portabilidad')"
                   class="border border-slate-800 rounded-full w-full py-2 mb-2 px-2 sm:px-10 text-sm sm:text-[19px] font-extrabold text-white hover:bg-slate-800 hover:text-white transition">
                   Elegir plan
                 </button>
@@ -1010,7 +1011,7 @@
   </section>
 
   <!-- Botón flotante WhatsApp -->
-  <a href="https://wa.me/521XXXXXXXXXX?text=Hola%2C%20me%20gustar%C3%ADa%20solicitar%20informaci%C3%B3n%20sobre%20los%20planes%20Movistar."
+  <a href="https://wa.me/5540312270?text=Hola%2C%20me%20gustar%C3%ADa%20solicitar%20informaci%C3%B3n%20sobre%20los%20planes%20Movistar."
     target="_blank" id="whatsapp-btn" style="
      position: fixed;
      bottom: 28px;
@@ -1155,6 +1156,14 @@
         });
       });
     })();
+
+    function solicitarPlan(plan, tipo) {
+      const numero = "5540312270";
+      const mensaje = `Hola, quiero información del plan ${plan} de ${tipo}`;
+      const url = `https://wa.me/${numero}?text=${encodeURIComponent(mensaje)}`;
+      window.open(url, "_blank");
+    }
+
   </script>
 </body>
 
